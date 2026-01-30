@@ -1,4 +1,4 @@
-import vdo1 from "../videos/61-Categories-of-Courses-Presentation-2.mp4";
+import vdo1 from "../videos/61-Categories-of-Courses-Presentation-2.jpg";
 const videos={
   vdo1
 };
