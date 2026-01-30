@@ -9,7 +9,9 @@ const Explore = () => {
   const handleCardClick = (index, url) => {
     if (index === 0) {
       // Open PDF for the first card
-      window.open(url, "_blank");
+      // window.open(url, "_blank");
+       setVideoUrl(url);
+      setIsPopupOpen(true);
     } else {
       // Show YouTube popup for other cards
       setVideoUrl(url);
@@ -27,11 +29,11 @@ const Explore = () => {
       <div className="mx-auto flex justify-center">
         <div>
           <h3 className="font-serif sm:text-[36px] text-xl text-center text-primary font-semibold">
-            Explore Our Vision and Videos
+            Testimonials
           </h3>
-          <p className="roboto-serif-font font-bold sm:text-[21px] text-xs text-secondary pt-[10px] flex justify-center">
+          {/* <p className="roboto-serif-font font-bold sm:text-[21px] text-xs text-secondary pt-[10px] flex justify-center">
             Gain insights into our vision and explore engaging videos.
-          </p>
+          </p> */}
         </div>
       </div>
       <div className="py-[70px]">
@@ -44,29 +46,30 @@ const Explore = () => {
             >
               <div className="relative">
                 {/* Icon */}
-                <img
+                {/* <img
                   src={data.icon}
                   alt=""
                   className="absolute p-[12px] bg-white"
-                />
+                /> */}
 
                 {/* Play/PDF Icon */}
                 <div
                   className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-2.5 py-2.5 ${
-                    index === 0 ? "bg-red-600" : "bg-secondary"
+                    index === 0 ? "bg-red-600" : "bg-red-600"
                   } rounded-full flex justify-center items-center border-2 border-white`}
                 >
-                  {index === 0 ? (
+                  {/* <FaFilePdf className="text-white text-xl" /> */}
+                  {/* {index === 0 ? (
                     <FaFilePdf className="text-white text-xl" />
                   ) : (
-                    <FaPlay className="text-white text-sm" />
-                  )}
+                   <FaFilePdf className="text-white text-xl" />
+                  )} */}
                 </div>
 
                 {/* Card Image */}
                 <img
                   src={data.image}
-                  alt="Card Image"
+                  // alt="Card Image"
                   className="w-full h-[265px] object-cover rounded-2xl"
                 />
               </div>

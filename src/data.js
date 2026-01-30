@@ -17,55 +17,80 @@ const HeroFourData = [
     text: "Debt Collection and Revenue Management Courses",
   },
 ];
+
 const ExploreCardData = [
-  {
+   {
     id: 1,
-    videoUrl: CoursePdf.anniversry21, // Make sure this is a direct PDF URL
+    videoUrl: CoursePdf.Testimonials2025, // Make sure this is a direct PDF URL
     icon: images.cardicon1,
-    image: images.card1,
-    title: "21* ANNIVERSARY VISION & MISSION",
-    desc: "As we mark 21 years of success, innovation, and growth, we envision a future driven by excellence, creativity, and impact. Our journey has been about transforming ideas into reality.",
+    image: images.pdf2,
+    title: "VIRTUAL (ON-LINE) TRAINING PROGRAM Debt Collections Strategies and Techniques for the National Lotteries Control Board",
+    // desc: "",
   },
   {
     id: 2,
-    videoUrl: "https://www.youtube.com/embed/mvrXw1jt1vE", // Correct YouTube embed link
-    icon: images.number58,
-    image: images.card2,
-    title: "58 Categories of Customized Industry Courses",
-    desc: "Our 58 categories of customized industry courses are designed to meet the evolving needs of professionals across diverse sectors.",
+    videoUrl: CoursePdf.Testimonials12032026, // Make sure this is a direct PDF URL
+    icon: images.cardicon1,
+    image: images.pdf2,
+    title: "Testimonials: Online (Virtual) Debt Collections & Revenue Management Procedures Training Program National Insurance Corporation (NIC) Castries, Saint Lucia", 
+    desc: "",
   },
   {
     id: 3,
-    videoUrl: videos.vdo1,
-    icon: images.cardicon3,
-    image: images.card3,
-    title: "Innovative Training Courses",
-    desc: "Our courses blend technology, practical learning, and expert insights to equip professionals with the skills needed for success.",
+    videoUrl: CoursePdf.Testimonials120312032025, // Make sure this is a direct PDF URL
+    icon: images.cardicon1,
+    image: images.pdf2,
+    title: "ZOOM TESTIMONIALS VIRTUAL (ONLINE) TRAINING COMPLETED Office of the Tax Commissioner, Bermuda Government, Bermuda", 
+    desc: "",
   },
-  {
-    id: 4,
-    videoUrl: "https://www.youtube.com/embed/LN2-YXRt9qg",
-    icon: images.cardicon4,
-    image: images.card4,
-    title: "Debt Collection & Revenue Management Procedures",
-    desc: "By implementing structured strategies, timely follow-ups, and compliance-driven processes, businesses can maximize recovery while maintaining strong client relationships.",
-  },
-  {
-    id: 5,
-    videoUrl: "https://www.youtube.com/embed/g_gzdOCnhaQ?si=GYWfANBBNI2gMCo1",
-    icon: images.cardicon5,
-    image: images.card5,
-    title: "Photo History Series One",
-    desc: "A journey through time, capturing iconic moments, historical milestones, and untold stories. This series brings the past to life through powerful imagery, preserving history one frame.",
-  },
-  {
-    id: 6,
-    videoUrl: "https://www.youtube.com/embed/GFOfZVr6Njk?si=GfOaWEhY95_IR6Bm",
-    icon: images.cardicon5,
-    image: images.card6,
-    title: "Photo History Series Two",
-    desc: "Continuing the visual journey, this series unveils rare glimpses of the past, timeless memories, and pivotal moments that shaped history. ",
-  },
+  // {
+  //   id: 1,
+  //   videoUrl: CoursePdf.anniversry21, // Make sure this is a direct PDF URL
+  //   icon: images.cardicon1,
+  //   image: images.card1,
+  //   title: "21* ANNIVERSARY VISION & MISSION",
+  //   desc: "As we mark 21 years of success, innovation, and growth, we envision a future driven by excellence, creativity, and impact. Our journey has been about transforming ideas into reality.",
+  // },
+  // {
+  //   id: 2,
+  //   videoUrl: "https://www.youtube.com/embed/mvrXw1jt1vE", // Correct YouTube embed link
+  //   icon: images.number58,
+  //   image: images.card2,
+  //   title: "58 Categories of Customized Industry Courses",
+  //   desc: "Our 58 categories of customized industry courses are designed to meet the evolving needs of professionals across diverse sectors.",
+  // },
+  // {
+  //   id: 3,
+  //   videoUrl: videos.vdo1,
+  //   icon: images.cardicon3,
+  //   image: images.card3,
+  //   title: "Innovative Training Courses",
+  //   desc: "Our courses blend technology, practical learning, and expert insights to equip professionals with the skills needed for success.",
+  // },
+  // {
+  //   id: 4,
+  //   videoUrl: "https://www.youtube.com/embed/LN2-YXRt9qg",
+  //   icon: images.cardicon4,
+  //   image: images.card4,
+  //   title: "Debt Collection & Revenue Management Procedures",
+  //   desc: "By implementing structured strategies, timely follow-ups, and compliance-driven processes, businesses can maximize recovery while maintaining strong client relationships.",
+  // },
+  // {
+  //   id: 5,
+  //   videoUrl: "https://www.youtube.com/embed/g_gzdOCnhaQ?si=GYWfANBBNI2gMCo1",
+  //   icon: images.cardicon5,
+  //   image: images.card5,
+  //   title: "Photo History Series One",
+  //   desc: "A journey through time, capturing iconic moments, historical milestones, and untold stories. This series brings the past to life through powerful imagery, preserving history one frame.",
+  // },
+  // {
+  //   id: 6,
+  //   videoUrl: "https://www.youtube.com/embed/GFOfZVr6Njk?si=GfOaWEhY95_IR6Bm",
+  //   icon: images.cardicon5,
+  //   image: images.card6,
+  //   title: "Photo History Series Two",
+  //   desc: "Continuing the visual journey, this series unveils rare glimpses of the past, timeless memories, and pivotal moments that shaped history. ",
+  // },
 ];
 const PartnerData = [
   {
@@ -157,6 +182,16 @@ const PartnerData = [
     id: 18,
     img: images.logo4,
     title: "St. Vincent Building & Loan Association",
+  },
+  {
+    id: 19,
+    img: images.logo89,
+    title: "National Lotteries Control Board",
+  },
+  {
+    id: 20,
+    img: images.logo90,
+    title: "National Insurance Corporation (NIC) Castries, Saint Lucia",
   },
 ];
 const PartnerData2 = [
@@ -250,6 +285,7 @@ const PartnerData2 = [
     img: images.logo4,
     title: "St. Vincent Building & Loan Association",
   },
+  
   {
     id: 19,
     img: images.logo5,
@@ -669,6 +705,16 @@ const PartnerData2 = [
     id: 102,
     img: images.logo88,
     title: "The Bahamas Treasury The Bahamas ",
+  },
+  {
+    id: 103,
+    img: images.logo89,
+    title: "National Lotteries Control Board",
+  },
+  {
+    id: 104,
+    img: images.logo90,
+    title: "National Insurance Corporation (NIC) Castries, Saint Lucia",
   },
 ];
 const Onlinecourcesdata = [

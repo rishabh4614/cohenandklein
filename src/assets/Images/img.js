@@ -150,6 +150,8 @@ import logo85 from "./logo85.png";
 import logo86 from "./logo86.png";
 import logo87 from "./logo87.png";
 import logo88 from "./logo88.png";
+import logo89 from "./logo89.png";
+import logo90 from "./logo90.png";
 import yellowpatti from "./yellow-patti.png";
 import contactbackground from './contactbg.png';
 import contactimg1 from "./contactbigimg.png";
@@ -190,6 +192,8 @@ import bannerevents2 from "./bannerevents2.png";
 import bannerevents3 from "./bannerevents3.png";
 import Onlineyellow from "./Onlineyellow.png";
 import number58 from "./number58.png";
+import pdf2 from "./pdf2.png";
+
 const images = {
   number58,
   categoriesyellow,
@@ -352,6 +356,8 @@ const images = {
   logo86,
   logo87,
   logo88,
+  logo89,
+  logo90,
   yellowpatti, 
   seminarcard1,
   seminarcard2,
@@ -383,6 +389,7 @@ const images = {
   bannerevents1,
   bannerevents2,  
   bannerevents3,
+  pdf2,
 };
 
 export default images;
