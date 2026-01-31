@@ -29,7 +29,7 @@ const Explore = () => {
       <div className="mx-auto flex justify-center">
         <div>
           <h3 className="font-serif sm:text-[36px] text-xl text-center text-primary font-semibold">
-            Testimonials
+           Some Recent Testimonials
           </h3>
           {/* <p className="roboto-serif-font font-bold sm:text-[21px] text-xs text-secondary pt-[10px] flex justify-center">
             Gain insights into our vision and explore engaging videos.
@@ -54,9 +54,9 @@ const Explore = () => {
 
                 {/* Play/PDF Icon */}
                 <div
-                  className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-2.5 py-2.5 ${
-                    index === 0 ? "bg-red-600" : "bg-red-600"
-                  } rounded-full flex justify-center items-center border-2 border-white`}
+                  // className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-2.5 py-2.5 ${
+                  //   index === 0 ? "bg-red-600" : "bg-red-600"
+                  // } rounded-full flex justify-center items-center border-2 border-white`}
                 >
                   {/* <FaFilePdf className="text-white text-xl" /> */}
                   {/* {index === 0 ? (

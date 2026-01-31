@@ -21,17 +21,17 @@ const HeroFourData = [
 const ExploreCardData = [
    {
     id: 1,
-    videoUrl: CoursePdf.Testimonials2025, // Make sure this is a direct PDF URL
+    // videoUrl: CoursePdf.Testimonials2025, // Make sure this is a direct PDF URL
     icon: images.cardicon1,
-    image: images.pdf2,
-    title: "VIRTUAL (ON-LINE) TRAINING PROGRAM Debt Collections Strategies and Techniques for the National Lotteries Control Board",
+    image: images.pdf,
+    title: "VIRTUAL (ON-LINE) TRAINING PROGRAM Debt Collections Strategies and Techniques for the National Lotteries Control Board Trinidad and Tobago",
     // desc: "",
   },
   {
     id: 2,
     videoUrl: CoursePdf.Testimonials12032026, // Make sure this is a direct PDF URL
     icon: images.cardicon1,
-    image: images.pdf2,
+    image: images.pdf,
     title: "Testimonials: Online (Virtual) Debt Collections & Revenue Management Procedures Training Program National Insurance Corporation (NIC) Castries, Saint Lucia", 
     desc: "",
   },
@@ -39,7 +39,7 @@ const ExploreCardData = [
     id: 3,
     videoUrl: CoursePdf.Testimonials120312032025, // Make sure this is a direct PDF URL
     icon: images.cardicon1,
-    image: images.pdf2,
+    image: images.pdf,
     title: "ZOOM TESTIMONIALS VIRTUAL (ONLINE) TRAINING COMPLETED Office of the Tax Commissioner, Bermuda Government, Bermuda", 
     desc: "",
   },
