@@ -43,6 +43,14 @@ const ExploreCardData = [
     title: "ZOOM TESTIMONIALS VIRTUAL (ONLINE) TRAINING COMPLETED Office of the Tax Commissioner, Bermuda Government, Bermuda", 
     desc: "",
   },
+  {
+    id: 4,
+    videoUrl: CoursePdf.debtcolltraining, // Make sure this is a direct PDF URL
+    icon: images.cardicon1,
+    image: images.pdf,
+    title: "Debt Collections and Strategies Techniques for Banks and Other Financial Institutions", 
+    desc: "",
+  },
   // {
   //   id: 1,
   //   videoUrl: CoursePdf.anniversry21, // Make sure this is a direct PDF URL

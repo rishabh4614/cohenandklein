@@ -37,14 +37,15 @@ const Explore = () => {
         </div>
       </div>
       <div className="py-[70px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-11 gap-6 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
+
           {ExploreCardData.map((data, index) => (
             <div
               key={index}
-              className="max-w-[510px] w-full rounded-lg overflow-hidden drop-shadow-[0_0_40px_rgba(1,61,123,0.1)] bg-white p-[20px] cursor-pointer"
+              className="max-w-[410px] w-full rounded-lg overflow-hidden drop-shadow-[0_0_40px_rgba(1,61,123,0.1)] bg-white p-[20px] cursor-pointer"
               onClick={() => handleCardClick(index, data.videoUrl)}
             >
-              <div className="relative">
+              <div className="relative flex items-center justify-center h-[200px] bg-[#fff1f1] rounded-xl">
                 {/* Icon */}
                 {/* <img
                   src={data.icon}
@@ -70,19 +71,21 @@ const Explore = () => {
                 <img
                   src={data.image}
                   // alt="Card Image"
-                  className="w-full h-[265px] object-cover rounded-2xl"
+                  className="w-[80px] h-[100px] object-contain"
+
                 />
               </div>
 
               {/* Card Content */}
-              <div className="pt-[20px] flex flex-col gap-[15px]">
-                <h2 className="text-[20px] font-semibold text-primary tracking-[.2px]">
-                  {data.title}
-                </h2>
-                <p className="text-[#021326] text-base pb-[20px]">
-                  {data.desc}
-                </p>
-              </div>
+             <div className="pt-4 flex flex-col gap-3">
+            <h2 className="text-[18px] font-semibold text-primary">
+              {data.title}
+            </h2>
+            <p className="text-[#021326] text-sm">
+              {data.desc}
+            </p>
+          </div>
+
             </div>
           ))}
         </div>

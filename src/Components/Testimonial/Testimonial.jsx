@@ -11,7 +11,7 @@ const Testimonial = () => {
       <div className="z-10">
         <div className="px-4 sm:px-6 lg:px-12">
           <div className="font-serif lg:text-[36px] sm:text-2xl text-base text-center text-primary font-semibold mb-8">
-            Some Debt Collections & Revenue Management Testimonials
+            Some Recent Debt Collections & Revenue Management Testimonials
           </div>
 
           <div className="flex flex-col lg:flex-row gap-10">
@@ -59,112 +59,27 @@ const Testimonial = () => {
         </div>
       </div>
 
-      {/* <div className="items-center">
-        <div className="relative">
-          <img
-            src={images.dotes}
-            alt=""
-            className="absolute top-[26px] lg:left-0 left-0"
-          />
-          <img
-            src={images.orangecircle}
-            alt=""
-            className="sm:block hidden absolute top-[128px] lg:left-[125px] right-[125px] z-0 max-w-[370px]"
-          />
-        </div>
-        
-        <div className="flex justify-center">
-          <div className="relative z-10 mt-[79px]">
-            <div className="bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)] max-w-[345px] h-[252px] p-[20px] flex flex-col  rounded-[10px]">
-              <div className="pb-[20px] border-b-[2px] border-[rgba(0,0,0,0.1)]">
-                <h3 className="text-primary text-[20px] font-semibold roboto-serif-font pb-[10px]">
-                  Cohen & Klein Consulting
-                </h3>
-                <div className="flex items-center gap-[15px]">
-                  <img
-                    src={icons.many}
-                    alt=""
-                    className="px-[12px] py-[14px] bg-primary rounded-[10px]"
-                  />
-                  <img
-                    src={icons.sixytythree}
-                    alt=""
-                    className="px-[12px] py-[14px] bg-primary rounded-[10px]"
-                  />
-                  <img
-                    src={icons.img34}
-                    alt=""
-                    className="px-[12px] py-[14px] bg-primary rounded-[10px]"
-                  />
-                  <img
-                    src={icons.thousand}
-                    alt=""
-                    className="px-[12px] py-[14px] bg-primary rounded-[10px]"
-                  />
-                </div>
-              </div>
-
-              <div className="mt-[20px]">
-                <p className="text-[#021326]">You can Register through</p>
-                <div className="flex gap-[15px] mt-[15px]">
-                  <Link to="/registration?method=email">
-                    <button className="px-[50px] py-[10px] bg-secondary rounded-[5px] text-white cursor-pointer">
-                      Email
-                    </button>
-                  </Link>
-                  <Link to="/registration?method=fax">
-                    <button className="px-[50px] py-[10px] bg-primary rounded-[5px] text-white cursor-pointer">
-                      By Fax
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        
-        <div className="flex justify-center md:justify-end lg:justify-center 2xl:ml-30 lg:ml-20 ">
+      <div className="flex xl:flex-row flex-col mt-6 gap-10 md:px-15 justify-between items-start">
+        <div className="flex justify-start">
           <div
-            className="flex flex-col relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b] 2xl:p-3 lg:p-2 sm:p-4 p-2.5 gap-1 2xl:max-w-[510px] max-w-[460px]  sm:mt-[99px] mt-10 lg:ml-[60px] items-center cursor-pointer"
+            className="flex flex-col relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b] 2xl:p-3 lg:p-2 sm:p-4 p-2.5 gap-1 2xl:max-w-[510px] max-w-[460px] sm:mt-[99px] mt-10 lg:ml-[60px] items-center cursor-pointer"
             onClick={() => window.open(CoursePdf.debtcollectionpdf, "_blank")}
           >
             <div className="flex gap-x-2">
               <img src={images.pdf} alt="" className="max-w-15 h-13 m-auto" />
-              <h6 className="text-primary leading-[23px] font-medium roboto-serif-font 2xl:text-[22px]  sm:text-lg text-base">
+              <h6 className="text-primary leading-[23px] font-medium roboto-serif-font 2xl:text-[22px] sm:text-lg text-base">
                 100+ Debt Collection & Revenue Management Training Courses
               </h6>
             </div>
-            <div>
-              <p className="text-smallclr roboto 2xl:text-lg text-sm sm:text-base leading-[23px]">
-                The longer your delinquent accounts go uncollected, the harder
-                they will be to recover.
-              </p>
-            </div>
+
+            <p className="text-smallclr roboto 2xl:text-lg text-sm sm:text-base leading-[23px]">
+              The longer your delinquent accounts go uncollected, the harder
+              they will be to recover.
+            </p>
           </div>
         </div>
-      </div> */}
 
-      <div className="w-full relative flex flex-col items-center">
-        {/* ===== TOP SECTION (CIRCLE + CARD STACKED) ===== */}
-        <div className="relative w-full flex justify-center items-center">
-          {/* Background shapes */}
-
-           {/* <div className="absolute flex justify-center items-center z-0">
-            <img
-              src={images.dotes}
-              alt=""
-              className="absolute -top-10 left-1/2 -translate-x-1/2"
-            />
-
-            <img
-              src={images.orangecircle}
-              alt=""
-              className="hidden sm:block max-w-[370px]"
-            />
-          </div> */}
-
-          {/* Foreground card */}
+        <div className="flex justify-center w-full xl:w-1/2">
           <div className="relative z-10 mt-[79px]">
             <div className="bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)] max-w-[345px] h-[252px] p-[20px] flex flex-col rounded-[10px]">
               <div className="pb-[20px] border-b-[2px] border-[rgba(0,0,0,0.1)]">
@@ -212,26 +127,6 @@ const Testimonial = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* ===== SECOND BOX (UNCHANGED) ===== */}
-        <div className="flex justify-center md:justify-end lg:justify-center 2xl:ml-30 lg:ml-20">
-          <div
-            className="flex flex-col relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b] 2xl:p-3 lg:p-2 sm:p-4 p-2.5 gap-1 2xl:max-w-[510px] max-w-[460px] sm:mt-[99px] mt-10 lg:ml-[60px] items-center cursor-pointer"
-            onClick={() => window.open(CoursePdf.debtcollectionpdf, "_blank")}
-          >
-            <div className="flex gap-x-2">
-              <img src={images.pdf} alt="" className="max-w-15 h-13 m-auto" />
-              <h6 className="text-primary leading-[23px] font-medium roboto-serif-font 2xl:text-[22px] sm:text-lg text-base">
-                100+ Debt Collection & Revenue Management Training Courses
-              </h6>
-            </div>
-
-            <p className="text-smallclr roboto 2xl:text-lg text-sm sm:text-base leading-[23px]">
-              The longer your delinquent accounts go uncollected, the harder
-              they will be to recover.
-            </p>
           </div>
         </div>
       </div>
