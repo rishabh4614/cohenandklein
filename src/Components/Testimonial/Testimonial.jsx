@@ -7,76 +7,64 @@ import CoursePdf from "../../assets/CourcesPDF/CoursePdf.js";
 
 const Testimonial = () => {
   return (
-
-    
     <div className="mx-auto">
       
-      <div className=" z-10">
-        <div>
-          <div className="font-serif lg:text-[36px] sm:text-2xl text-base text-center text-primary font-semibold">
-            Some Recent Collections & Revenue Management Testimonials
-          </div>
-          
-          <div className="flex xl:flex-row flex-col mt-6 gap-10 md:px-15 justify-center ">
-
-            <div className=" flex gap-3 cursor-pointer items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
-              <Link
-                to="#"
-                className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em] "
-                onClick={() =>
-                  window.open(CoursePdf.debtcolltraining, "_blank")
-                }
-              >
-                Debt Collection and revenue management training for banks and
-                other financial institutions
-              </Link>
-              <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
-            </div>
-            
-            <div className=" flex gap-3 items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
-              <Link
-                to="/debtcollinner"
-                className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em] "
-              >
-                Inspiring Debt Collection and Revenue Management Training
-                Testimonials from Our Satisfied Clients
-              </Link>
-              <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
-            </div>
+      <div className="z-10">
+        <div className="px-4 sm:px-6 lg:px-12">
+          <div className="font-serif lg:text-[36px] sm:text-2xl text-base text-center text-primary font-semibold mb-8">
+            Some Debt Collections & Revenue Management Testimonials
           </div>
 
-
-
-          <div className="flex xl:flex-row flex-col mt-6 gap-10 md:px-15 justify-center ">
-            <div className="  flex gap-3 items-center max-w-[660px]  border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
-              <Link
-                to="/callinner"
-                className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em]"
-              >
-                Authentic Call Center and Customer Service Training Testimonials
-                from Our Valued Clients
-              </Link>
-              <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
+          <div className="flex flex-col lg:flex-row gap-10">
+            {/* Left column */}
+            <div className="flex flex-col sm:gap-6 gap-3 lg:items-left items-left ">
+              <div className=" flex gap-3 cursor-pointer items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
+                <Link
+                  to="#"
+                  className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em] "
+                  onClick={() =>
+                    window.open(CoursePdf.debtcolltraining, "_blank")
+                  }
+                >
+                  Debt Collection and revenue management training for banks and
+                  other financial institutions
+                </Link>
+                <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
+              </div>
+              <div className=" flex gap-3 items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
+                <Link
+                  to="/debtcollinner"
+                  className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em] "
+                >
+                  Inspiring Debt Collection and Revenue Management Training
+                  Testimonials from Our Satisfied Clients
+                </Link>
+                <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
+              </div>
             </div>
 
-            <div className="  flex gap-3 items-center max-w-[660px]  border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
-              <Link
-                to="/callinner"
-                className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em]"
-              >
-                Authentic Call Center and Customer Service Training Testimonials
-                from Our Valued Clients
-              </Link>
-              <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
+            {/* Right column */}
+            <div className="flex flex-col sm:gap-6 gap-3 ml-auto max-w-[660px]">
+              <div className="  flex gap-3 items-center max-w-[660px]  border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
+                <Link
+                  to="/callinner"
+                  className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em]"
+                >
+                  Authentic Call Center and Customer Service Training
+                  Testimonials from Our Valued Clients
+                </Link>
+                <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
+              </div>
             </div>
           </div>
-           
-          
-
-
         </div>
+        
+        
+
+
       </div>
-      <div className="items-center">
+
+      {/* <div className="items-center">
         <div className="relative">
           <img
             src={images.dotes}
@@ -90,7 +78,7 @@ const Testimonial = () => {
           />
         </div>
         <div className="flex justify-center sm:justify-start">
-          {/* <div className="relative z-10 mt-[79px] sm:left-[53px] items-center">
+          <div className="relative z-10 mt-[79px] sm:left-[53px] items-center">
             <div className="bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)] max-w-[345px] h-[252px] p-[20px] flex flex-col  rounded-[10px]">
               <div className="pb-[20px] border-b-[2px] border-[rgba(0,0,0,0.1)]">
                 <h3 className="text-primary text-[20px] font-semibold roboto-serif-font pb-[10px]">
@@ -136,9 +124,9 @@ const Testimonial = () => {
                 </div>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
-        {/* <div className="flex justify-center md:justify-end lg:justify-center 2xl:ml-30 lg:ml-20 ">
+        <div className="flex justify-center md:justify-end lg:justify-center 2xl:ml-30 lg:ml-20 ">
           <div
             className="flex flex-col relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b] 2xl:p-3 lg:p-2 sm:p-4 p-2.5 gap-1 2xl:max-w-[510px] max-w-[460px]  sm:mt-[99px] mt-10 lg:ml-[60px] items-center cursor-pointer"
             onClick={() => window.open(CoursePdf.debtcollectionpdf, "_blank")}
@@ -156,8 +144,8 @@ const Testimonial = () => {
               </p>
             </div>
           </div>
-        </div> */}
-      </div>
+        </div>
+      </div> */}
     </div>
   );
 };
