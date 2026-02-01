@@ -24,7 +24,7 @@ const ExploreCardData = [
     // videoUrl: CoursePdf.Testimonials2025, // Make sure this is a direct PDF URL
     icon: images.cardicon1,
     image: images.pdf,
-    title: "VIRTUAL (ON-LINE) TRAINING PROGRAM Debt Collections Strategies and Techniques for the National Lotteries Control Board Trinidad and Tobago",
+    title: "VIRTUAL (ON-LINE) TRAINING PROGRAM Debt Collections Strategies and Techniques for the National Lotteries Control Board, Trinidad and Tobago",
     // desc: "",
   },
   {

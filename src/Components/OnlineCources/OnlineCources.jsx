@@ -68,7 +68,7 @@ const OnlineCources = () => {
               onClick={() => window.open(CoursePdf.pdf202612, "_blank")}
             >
               2026, Debt Collections and Revenue Management Virtual Training
-              Schedule
+              Schedule - Zoom Platform
             </Link>
             <div className="flex xl:flex-row flex-col mt-6 gap-10 md:px-15 justify-center">
               <div className="flex justify-center md:justify-end lg:justify-center ">
