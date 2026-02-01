@@ -79,9 +79,26 @@ const Testimonial = () => {
           </div>
         </div>
 
+        
+                  
         <div className="flex justify-center w-full xl:w-1/2">
           <div className="relative z-10 mt-[79px]">
-            <div className="bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)] max-w-[345px] h-[252px] p-[20px] flex flex-col rounded-[10px]">
+            <div className="absolute inset-0 z-0 pointer-events-none">
+            <img
+              src={images.dotes}
+              alt=""
+              className="absolute top-[26px] left-[-20px]"
+            />
+            <img
+              src={images.orangecircle}
+              alt=""
+              className="hidden sm:block absolute top-[110px] left-[90px] max-w-[370px]"
+            />
+          </div>
+            <div className="relative z-10 bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]
+                    max-w-[345px] h-[252px] p-[20px]
+                    flex flex-col rounded-[10px]">
+                      
               <div className="pb-[20px] border-b-[2px] border-[rgba(0,0,0,0.1)]">
                 <h3 className="text-primary text-[20px] font-semibold roboto-serif-font pb-[10px]">
                   Cohen & Klein Consulting

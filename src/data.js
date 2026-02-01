@@ -48,7 +48,7 @@ const ExploreCardData = [
     videoUrl: CoursePdf.debtcolltraining, // Make sure this is a direct PDF URL
     icon: images.cardicon1,
     image: images.pdf,
-    title: "Debt Collections and Strategies Techniques for Banks and Other Financial Institutions", 
+    title: "Debt Collections and Strategies and Techniques for Banks and Other Financial Institutions – NATIONAL BANK OF DOMINICA, ROSEAU", 
     desc: "",
   },
   // {
