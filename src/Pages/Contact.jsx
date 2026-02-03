@@ -2,7 +2,65 @@ import images from "../assets/Images/img";
 import icons from "../assets/icons/icon";
 import { FaCheckCircle } from "react-icons/fa";
 import { LuPhoneCall } from "react-icons/lu";
+import React, { useState } from "react";
+
+
 const Contact = () => {
+
+const [formData, setFormData] = useState({
+  firstName: "",
+  lastName: "",
+  email: "",
+  company: "",
+  message: "",
+});
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const body = new URLSearchParams();
+  body.append("form_type", "contact");
+  body.append("first_name", formData.firstName);
+  body.append("last_name", formData.lastName);
+  body.append("email", formData.email);
+  body.append("company", formData.company);
+  body.append("message", formData.message);
+
+  try {
+    const res = await fetch("https://cohenandklein.com/save.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: body.toString(),
+    });
+
+    const text = await res.text();
+
+    if (text.trim() === "saved") {
+      alert("Form submitted successfully");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        message: "",
+      });
+    } else {
+      alert("Submission failed: " + text);
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Server error");
+  }
+};
+
   return (
     <div className="roboto  mt-43">
       <div>
@@ -124,7 +182,7 @@ const Contact = () => {
             <h2 className="text-3xl md:text-4xl text-primary font-semibold mb-6 text-left roboto-serif-font">
               Contact Us
             </h2>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               {/* First Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -133,19 +191,27 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
                     className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter First Name"
                   />
                 </div>
+                
                 <div>
                   <label className="block text-lg text-blacklight font-medium">
                     Last Name<span className="text-red-600">*</span>
                   </label>
                   <input
                     type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
                     className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter Last Name"
                   />
+
                 </div>
               </div>
 
@@ -157,9 +223,13 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter Email"
                   />
+
                 </div>
                 <div>
                   <label className="block text-lg text-blacklight font-medium">
@@ -167,10 +237,14 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
                     required
                     className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter Company"
                   />
+
                 </div>
               </div>
 
@@ -180,9 +254,13 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   className="p-3 w-full rounded-md h-32 bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                   placeholder="Write Message"
-                ></textarea>
+                />
+
               </div>
 
               {/* Submit Button */}
