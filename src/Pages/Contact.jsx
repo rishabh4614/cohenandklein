@@ -170,11 +170,11 @@ const handleSubmit = async (e) => {
           <div className="w-full lg:w-[1000px] h-[580px] overflow-hidden order-2 lg:order-1">
             <iframe
               className="w-full h-full"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.063233087325!2d-80.26326082456999!3d26.00729057717653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ab5b9e35441f%3A0x3161a7ae769e01b7!2s8362%20Pines%20Blvd%2C%20Pembroke%20Pines%2C%20FL%2033024%2C%20USA!5e0!3m2!1sen!2sus!4v1711567890123!5m2!1sen!2sus"
-              allowFullScreen=""
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3024.5078705997876!2d-74.010049!3d40.706835!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1702a2ceab%3A0x7537a5035589668!2s30%20Wall%20St%2C%20New%20York%2C%20NY%2010005!5e0!3m2!1sen!2sus!4v1770231689663!5m2!1sen!2sus"
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            />
           </div>
 
           {/* Contact Form Section */}
