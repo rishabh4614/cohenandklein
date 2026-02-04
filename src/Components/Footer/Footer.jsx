@@ -127,9 +127,6 @@ const Footer = () => {
             <icons.MdOutlineEmail /> training@cohenandklein.com
           </a>
           <a href="#" className="flex items-center gap-2">
-            <icons.MdOutlineEmail /> collect@gate.net
-          </a>
-          <a href="#" className="flex items-center gap-2">
             <icons.MdOutlineEmail /> cohenandklein@cohenandklein.com
           </a>
         </div>

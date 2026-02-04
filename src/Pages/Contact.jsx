@@ -288,6 +288,7 @@ const handleSubmit = async (e) => {
             </h5>
             <div className="flex flex-col gap-1 justify-center items-center text-blacklight">
               <span>cohenandklein@cohenandklein.com</span>
+              <span>collect@gate.net</span>
               <span>training@cohenandklein.com</span>
             </div>
           </div>
@@ -298,7 +299,7 @@ const handleSubmit = async (e) => {
             </span>
             <h5 className="font-semibold text-xl text-primary">Main Office</h5>
             <div className="flex flex-col gap-1 justify-center items-center text-blacklight">
-              <span>8362 Pines Boulevard, Ste. 289</span>
+              <span>8362 Pines Boulevard,</span>
               <span>Pembroke Pines, FL 33024</span>
               <span>Telephone: 954-731-6340</span>
               <span>Fax: 954-731-6606</span>
