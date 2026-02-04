@@ -1447,8 +1447,14 @@ const Links = [
   { id: 3, name: "Seminar", link: "/seminar" },
   { id: 4, name: "About Us", link: "/about" },
   { id: 5, name: "Contact Us", link: "/contact" },
-  { id: 6, name: "History", link: "/assets/History-C_K-Crnf9ZvM.pdf" },
+  {
+    id: 6,
+    name: "History",
+    link: "/assets/History-C_K-Crnf9ZvM.pdf",
+    external: true,
+  },
 ];
+
 const CategoriesData = [
   {
     id: 1,
