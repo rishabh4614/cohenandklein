@@ -108,7 +108,7 @@ const Hero = () => {
           <div className="flex-col flex gap-12 sm:order-2 order-1">
             <div className=" flex flex-col md:gap-7 gap-4 items-center 2xl:mt-4.5">
               <h2 className="text-primary 2xl:text-[54px] lg:text-4xl 2xl:leading-[53px] sm:text-3xl text-base text-center roboto-serif-font font-semibold break-words">
-                Strategic Corporate Training Program
+                Strategic Corporate Training Programs
               </h2>
               <h2 className="text-primary 2xl:text-[54px] lg:text-4xl 2xl:leading-[53px] sm:text-3xl text-base text-center roboto-serif-font font-semibold break-words">
                 Discover from our 1000+ Premium Courses!

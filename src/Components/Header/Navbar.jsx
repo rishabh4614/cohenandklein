@@ -15,47 +15,50 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full">
-      <div className="roboto md:block hidden bg-footerdownclr text-white px-4 sm:px-8 md:px-10 2xl:px-15 py-2">
+    <header className="sticky top-0 z-100 bg-white shadow">
+      <div className="roboto md:block hidden bg-footerdownclr text-white px-4 sm:px-8 md:px-10 2xl:px-15 py-1">
         <div className="flex flex-col md:flex-row flex-wrap justify-between items-center mx-auto text-center md:text-left">
-          <div className="text-sm sm:text-base md:text-lg mb-2 md:mb-0">
-            <div className="2xl:text-base sm:text-sm text-xs flex flex-col md:flex-row gap-2 md:gap-9 text-center md:text-left roboto-serif-font">
-              <Link to="#" className="flex items-center gap-2 ">
+          <div className="mb-2 md:mb-0">
+            <div className="2xl:text-base sm:text-sm text-xs flex flex-col md:flex-row gap-2 md:gap-9 roboto-serif-font">
+              <Link to="#" className="flex items-center gap-2">
                 <icons.MdOutlineEmail /> cohenandklein@cohenandklein.com
               </Link>
               <Link to="#" className="flex items-center gap-2">
                 <icons.MdOutlineEmail /> training@cohenandklein.com
               </Link>
+              <Link to="#" className="flex items-center gap-2">
+                <icons.MdOutlineEmail /> collect@gate.net
+              </Link>
             </div>
           </div>
           <div className="text-center">
-            <Link className="2xl:text-base text-center  text-xs roboto-serif-font ">Strategic Human Capital Development Training Courses</Link>
+            <Link className="2xl:text-base text-xs roboto-serif-font">Strategic Human Capital Development Training Courses</Link>
           </div>
           <div className="flex flex-col sm:flex-row roboto-serif-font font-medium justify-center md:justify-between gap-4 sm:gap-6 md:gap-9">
-            <Link to="#" className="flex gap-2.5 items-center">
+            <Link to="#" className="flex items-center gap-2.5">
               <img
                 src={icons.call}
-                className="h-4 w-4 sm:h-[15px] sm:w-[15px]"
+                className="2xl:text-base sm:text-sm text-xs whitespace-nowrap"
                 alt="Call Icon"
               />
               <p className="2xl:text-base sm:text-sm text-xs whitespace-nowrap">
                 954-731-6340
               </p>
             </Link>
-            <Link to="#" className="flex gap-2.5 items-center">
+            <Link to="#" className="flex items-center gap-2.5">
               <img
                 src={icons.telephone}
-                className="h-4 w-4 sm:h-[15px] sm:w-[15px]"
+                className="2xl:text-base sm:text-sm text-xs whitespace-nowrap"
                 alt="Telephone Icon"
               />
               <p className="2xl:text-base sm:text-sm text-xs whitespace-nowrap">
                 954-731-6606
               </p>
             </Link>
-            <Link to="#" className="flex gap-2.5 items-center">
+            <Link to="#" className="flex items-center gap-2.5">
               <img
                 src={icons.call}
-                className="h-4 w-4 sm:h-[15px] sm:w-[15px]"
+                className="2xl:text-base sm:text-sm text-xs whitespace-nowrap"
                 alt="Call Icon"
               />
               <p className="2xl:text-base sm:text-sm text-xs whitespace-nowrap">
@@ -65,7 +68,7 @@ const Navbar = () => {
             <Link to="#" className="flex gap-2.5 items-center">
               <img
                 src={icons.telephone}
-                className="h-4 w-4 sm:h-[15px] sm:w-[15px]"
+                className="2xl:text-base sm:text-sm text-xs whitespace-nowrap"
                 alt="Telephone Icon"
               />
               <p className="2xl:text-base sm:text-sm text-xs whitespace-nowrap">
@@ -77,7 +80,8 @@ const Navbar = () => {
         </div>
       </div>
       <div className="bg-primary w-full roboto">
-        <div className="px-4 sm:px-8 padding-2xl py-5 flex items-center justify-between">
+
+        <div className="px-4 sm:px-8 padding-2xl py-2 flex items-center justify-between">
           <div className="flex-shrink-0">
             <Link to="/">
               <img
