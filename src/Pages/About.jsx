@@ -8,13 +8,17 @@ import {
 } from "../data";
 import Partner from "../Components/Partner/Partner";
 import CoursePdf from "../assets/CourcesPDF/CoursePdf";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const About = () => {
+   const navigate =useNavigate();
+   const handletestimonial=()=>{
+    navigate('/testimonialread')
+   }
   return (
     <>
       <div>
-        <div className="roboto 2xl:px-[150px] mt-43 lg:px-15 sm:px-8 px-6 lg:py-30 sm:py-20 py-10 ">
+        <div className="roboto 2xl:px-[150px] lg:px-15 sm:px-8 px-6 lg:py-30 sm:py-20 py-10 ">
           <div className="grid lg:grid-cols-2 grid-cols-1 2xl:gap-32 lg:gap-15">
             <div className="flex justify-center lg:mt-0 mt-12 items-center relative lg:order-1 order-2">
               <div>
@@ -37,10 +41,10 @@ const About = () => {
                   />
                 </div>
 
-                <div className=" 2xl:p-[15px] lg:p-2 border-1 border-[rgba(0,43,88,0.2)] shadow-[-10px_10px_0px_rgba(0,0,0,.25)] 2xl:max-w-[300px] max-w-[250px] rounded-[10px] absolute bottom-10 bg-white -left-9 ">
+                <div onClick={handletestimonial} className=" 2xl:p-[15px] cursor-pointer lg:p-2 border-1 border-[rgba(0,43,88,0.2)] shadow-[-10px_10px_0px_rgba(0,0,0,.25)] 2xl:max-w-[300px] max-w-[250px] rounded-[10px] absolute bottom-10 bg-white -left-9 ">
                   <h3 className="text-primary text-[20px] roboto-serif-font pb-[10px]">
                     <span className="text-smallclr pr-[5px] font-bold">
-                      MANY
+                      1500+
                     </span>
                     Positive Testimonials
                   </h3>
@@ -74,7 +78,7 @@ const About = () => {
                   />{" "}
                   27 Years
                 </span>{" "}
-                of Expertise
+                of Experience
               </h3>
               <h1 className="2xl:text-5xl xl:text-4xl lg:text-3xl text-2xl roboto-serif-font font-semibold text-primary">
                 Cohen & Klein Consulting, Inc. Established in 1997
@@ -125,17 +129,17 @@ const About = () => {
             ))}
           </div>
         </div>
-        <div className="roboto 2xl:px-[150px] lg:px-15 sm:px-8 px-6 sm:py-35 py-15 sm:pb-35 pb-15 flex flex-col">
-          <div className="flex justify-center items-center">
-          <div className="grid lg:grid-cols-4 grid-cols-2 gap-9 mx-auto">
+        <div className="roboto 2xl:px-[150px] lg:px-15 sm:px-8 px-6 py-15 sm:pb-35 pb-15 flex flex-col">
+          <div className="flex justify-center items-center sm:py-8 sm:order-1 order-2">
+            <div className="grid lg:grid-cols-4 grid-cols-2 gap-9 mx-auto">
               <div className="rounded-[12px] sm:rounded-[20px] 2xl:px-8 2xl:py-8 px-3 py-3 bg-gradient-cardOne flex items-center justify-center">
                 <Link
                   to="/newsinner"
                   className={` flex flex-col text-white sm:gap-3 gap-0 items-center justify-center `}
                 >
-                  <h2 className="2xl:text-5xl sm:text-4xl text-2xl font-bold font-serif ">
-                    MANY                  </h2>
-                  <span className="2xl:text-[22px] sm:text-base text-xs roboto">
+                  <h2 className="2xl:text-5xl leading-[24px] sm:text-4xl text-2xl font-bold font-serif">
+                    1500+</h2>
+                  <span className="2xl:text-[22px] leading-[26px] sm:text-base text-xs roboto">
                     Positive Testimonials
                   </span>
                 </Link>
@@ -145,11 +149,11 @@ const About = () => {
                   to="/categories"
                   className={` flex flex-col text-white sm:gap-3 gap-0 text-center items-center justify-center `}
                 >
-                  <h2 className="2xl:text-5xl sm:text-4xl text-2xl  font-bold roboto">
+                  <h2 className="2xl:text-5xl sm:text-4xl leading-[24px] text-2xl  font-bold roboto">
                     58
                   </h2>
-                  <span className="2xl:text-[22px] sm:text-base text-xs roboto">
-                    Categories of Customize Training Courses
+                  <span className="2xl:text-[22px] leading-[26px] sm:text-base text-xs roboto">
+                    Categories of Customized Training Courses
                   </span>
                 </Link>
               </div>
@@ -158,10 +162,10 @@ const About = () => {
                   to="/categories"
                   className={` flex flex-col text-white text-center sm:gap-3 gap-0 items-center justify-center `}
                 >
-                  <h2 className=" 2xl:text-5xl sm:text-4xl text-2xl  font-bold roboto">
+                  <h2 className=" 2xl:text-5xl leading-[24px] sm:text-4xl text-2xl  font-bold roboto">
                     1000+
                   </h2>
-                  <span className="2xl:text-[22px] sm:text-base text-xs roboto">
+                  <span className="2xl:text-[22px] leading-[26px] sm:text-base text-xs roboto">
                     Customized Training Courses
                   </span>
                 </Link>
@@ -171,11 +175,11 @@ const About = () => {
                   onClick={() => window.open(CoursePdf.debtcollectionpdf, "_blank")}
                   className="flex flex-col text-white sm:gap-4 gap-0 items-center text-center"
                 >
-                  <h2 className="2xl:text-5xl sm:text-4xl text-2xl font-bold roboto">
+                  <h2 className="2xl:text-5xl leading-[24px] sm:text-4xl text-2xl font-bold roboto">
                     100+
                   </h2>
-                  <span className="2xl:text-[22px] sm:text-base text-xs roboto">
-                   Customize Debt Collection and Revenue Management Training Courses
+                  <span className="2xl:text-[22px] leading-[26px] sm:text-base text-xs roboto">
+                   Customized Debt Collection and Revenue Management Courses
                   </span>
                 </Link>
               </div>

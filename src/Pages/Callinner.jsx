@@ -55,7 +55,7 @@ const Callinner = () => {
   }, []);
 
   return (
-    <div className="roboto  mt-43">
+    <div className="roboto ">
       {/* 🔹 Banner Slider */}
       <div className="overflow-hidden relative w-full">
         <div
@@ -84,7 +84,7 @@ const Callinner = () => {
       {/* 🔹 Main Buttons and Dropdown */}
       <div className="flex justify-between">
         <div>
-          <div className="grid lg:grid-cols-4 grid-cols-2 gap-3 px-5 pt-2 pb-8 max-w-[1500px]">
+          <div className="grid lg:grid-cols-4 grid-cols-2 gap-3 px-5 pt-2 pb-8 max-w-[1800px] mx-auto">
             <button
               className="text-primary rounded-lg 2xl:py-2  py-2 px-2 2xl:text-xl lg:text-sm sm:text-[13px] roboto-serif-font cursor-pointer border border-primary hover:bg-primary hover:text-white transition-all"
               onClick={() => window.open(CoursePdf.debtcolltraining, "_blank")}
@@ -101,7 +101,7 @@ const Callinner = () => {
               <Link to="/debtcollinner">Debt Collection Training Testimonials</Link>
             </button>
           </div>
-          <div className="2xl:px-15 lg:px-15 sm:px-8 pb-8 px-6 flex flex-col justify-center 2xl:gap-12 md:gap-8 gap-6">
+          <div className="2xl:px-15 lg:px-15 sm:px-8 pb-8 px-6 flex flex-col justify-center 2xl:gap-12 md:gap-8 gap-6 mx-auto">
             {/* 🔹 Dropdown */}
             <div className="relative inline-block text-left" ref={dropdownRef}>
               <button
@@ -285,41 +285,7 @@ const Callinner = () => {
             </button>
           </div>
         </div>
-        <div>
-          <div className="w-[420px] lg:flex hidden flex-col">
-            <div className="max-h-1070 overflow-y-auto relative custom-scrollbar">
-              <ul className="flex flex-col">
-                {/* Fixed Tab */}
-                <li className="bg-primary text-white 2xl:text-2xl sm:text-base text-base px-9 2xl:py-5 py-3 roboto-serif-font sticky top-0 z-10">
-                  Training Courses That You Should Attend Urgently
-                </li>
 
-                {/* Scrollable List */}
-                {Pdfdata.slice(0, 58).map((data, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center gap-4 px-9 py-5 bg-[#F2F9FF] cursor-pointer hover:bg-blue-100 transition"
-                    onClick={() => window.open(data.pdf, "_blank")}
-                  >
-                    <img
-                      src={images.pdf}
-                      alt="PDF Icon"
-                      className="w-11 h-11"
-                    />
-                    <div className="text-blacklight sm:text-lg text-sm font-semibold">
-                      <h4 className="inline">
-                        {data.id} - {data.title}
-                      </h4>
-                      <span className="text-gray-600 sm:text-base text-xs pl-1">
-                        {data.desc}
-                      </span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

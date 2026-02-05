@@ -6,7 +6,8 @@ import images from "../../assets/Images/img";
 import icons from "../../assets/icons/icon";
 import { Pdfdata } from "../../PdfData";
 import { ProfileData} from "../../data";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { TbTargetOff } from "react-icons/tb";
 const PrevArrow = ({ onClick, currentSlide }) => (
   <button
     className={`absolute bottom-[-50px] right-[77px] p-3 rounded-full transition ${
@@ -71,11 +72,17 @@ const Cources = () => {
       },
     ],
   };
+  const navigate =useNavigate();
+   const handletestimonial=()=>{
+    navigate('/testimonialread')
+   }
 
   return (
     <div className="pb-[100px] roboto">
       <div className="grid lg:grid-cols-3 grid-cols-2 sm:gap-0 gap-4">
-        <div className="pl-[30px] relative  lg:block hidden 2xl:mx-auto 2xl:pb-0 mb-30">
+        <div className="pl-[30px] relative  cursor-pointer lg:block hidden 2xl:mx-auto 2xl:pb-0 mb-30"
+        onClick={handletestimonial}
+        >
           <img
             src={images.Categoryimg}
             alt=""

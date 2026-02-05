@@ -1,71 +1,61 @@
+import { useState } from "react";
 import images from "../assets/Images/img";
 import icons from "../assets/icons/icon";
 import { FaCheckCircle } from "react-icons/fa";
 import { LuPhoneCall } from "react-icons/lu";
-import React, { useState } from "react";
-
-
 const Contact = () => {
-
-const [formData, setFormData] = useState({
-  firstName: "",
-  lastName: "",
-  email: "",
-  company: "",
-  message: "",
-});
-
-const handleChange = (e) => {
-  setFormData({
-    ...formData,
-    [e.target.name]: e.target.value,
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    company: "",
+    message: "",
   });
-};
-const handleSubmit = async (e) => {
-  e.preventDefault();
 
-  const body = new URLSearchParams();
-  body.append("form_type", "contact");
-  body.append("first_name", formData.firstName);
-  body.append("last_name", formData.lastName);
-  body.append("email", formData.email);
-  body.append("company", formData.company);
-  body.append("message", formData.message);
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  try {
-    const res = await fetch("https://cohenandklein.com/save.php", {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = new FormData();
+    for (let key in formData) {
+      form.append(key, formData[key]);
+    }
+    form.append("form_type", "contact"); // important
+
+    // ✅ Step 1: Send email
+    const res = await fetch("/send.php", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: body.toString(),
+      body: form,
     });
 
     const text = await res.text();
-
-    if (text.trim() === "saved") {
-      alert("Form submitted successfully");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        company: "",
-        message: "",
+    if (text.trim() === "success") {
+      // ✅ Step 2: Save to DB after email succeeds
+      await fetch("/save.php", {
+        method: "POST",
+        body: form,
       });
+
+      alert("Message sent successfully!");
+      // Optionally reset form
+      // setFormData({ first_name: "", last_name: "", email: "", company: "", message: "" });
     } else {
-      alert("Submission failed: " + text);
+      alert("Failed to send message.");
     }
-  } catch (error) {
-    console.error(error);
-    alert("Server error");
-  }
-};
+  };
 
   return (
-    <div className="roboto  mt-43">
+    <div className="roboto ">
       <div>
         <div className="2xl:px-[150px] lg:px-15 sm:px-8 px-6 relative overflow-hidden md:py-18 py-8 bg-[#FFFAF2] ">
-        <img src={images.bottomcontactdesign} alt="" className="-left-7  -bottom-4 absolute -z-0 2xl:w-[1000px] lg:w-[800px] md:w-[700px] sm:w-[600px] w-[550px]" />
+          <img
+            src={images.bottomcontactdesign}
+            alt=""
+            className="-left-7  -bottom-4 absolute -z-0 2xl:w-[1000px] lg:w-[800px] md:w-[700px] sm:w-[600px] w-[550px]"
+          />
           <div className=" grid lg:grid-cols-2 grid-cols-1 z-20 gap-10 ">
             <div className="flex flex-col 2xl:gap-8 md:gap-5 gap-3 ">
               <h2 className="text-secondary roboto-serif-font font-medium xl:text-2xl lg:text-lg text-base relative items-center leading-[170%]">
@@ -116,7 +106,6 @@ const handleSubmit = async (e) => {
                   </li>
                 </ul>
               </div>
-              
             </div>
             <div className="grid grid-cols-2 sm:gap-8 gap-2 z-20">
               <div className="flex flex-col md:gap-6 gap-3 relative">
@@ -138,7 +127,11 @@ const handleSubmit = async (e) => {
                     </h4>
                   </div>
                 </div>
-                <img src={images.redDot} alt="" className="lg:block hidden absolute 2xl:bottom-4.5 lg:-bottom-3.5 -left-11 -z-10 lg:w-40 w-28 "/>
+                <img
+                  src={images.redDot}
+                  alt=""
+                  className="lg:block hidden absolute 2xl:bottom-4.5 lg:-bottom-3.5 -left-11 -z-10 lg:w-40 w-28 "
+                />
               </div>
               <div className="flex flex-col md:gap-6 gap-3">
                 <div className="bg-secondary xl:rounded-tr-[70px] rounded-tr-[40px] xl:rounded-bl-[70px] rounded-bl-[40px] flex sm:gap-4 gap-2 px-4 2xl:px-11 sm:px-7 py-1.5 2xl:py-9 md:py-5 items-center justify-center">
@@ -150,7 +143,7 @@ const handleSubmit = async (e) => {
                       CONTACT NOW
                     </p>
                     <h4 className="text-base sm:text-lg 2xl:text-[32px] md:text-2xl  leading-8 md:leading-10 whitespace-nowrap">
-                    212-709-8026
+                      212-709-8026
                     </h4>
                   </div>
                 </div>
@@ -170,11 +163,11 @@ const handleSubmit = async (e) => {
           <div className="w-full lg:w-[1000px] h-[580px] overflow-hidden order-2 lg:order-1">
             <iframe
               className="w-full h-full"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3024.5078705997876!2d-74.010049!3d40.706835!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1702a2ceab%3A0x7537a5035589668!2s30%20Wall%20St%2C%20New%20York%2C%20NY%2010005!5e0!3m2!1sen!2sus!4v1770231689663!5m2!1sen!2sus"
-              allowFullScreen
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.378602601555!2d-74.0100733246186!3d40.707437938715225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1782c17aa9%3A0x3bc410b2f387f5f6!2s30%20Wall%20St%2C%20New%20York%2C%20NY%2010005%2C%20USA!5e0!3m2!1sen!2sus!4v1719585050000!5m2!1sen!2sus"
+              allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            />
+            ></iframe>
           </div>
 
           {/* Contact Form Section */}
@@ -183,6 +176,7 @@ const handleSubmit = async (e) => {
               Contact Us
             </h2>
             <form className="space-y-6" onSubmit={handleSubmit}>
+              <input type="hidden" name="form_type" value="contact" />
               {/* First Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -191,27 +185,25 @@ const handleSubmit = async (e) => {
                   </label>
                   <input
                     type="text"
-                    name="firstName"
-                    value={formData.firstName}
+                    name="first_name" // ✅ REQUIRED
+                    value={formData.first_Name}
                     onChange={handleChange}
-                    className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter First Name"
+                    className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                   />
                 </div>
-                
                 <div>
                   <label className="block text-lg text-blacklight font-medium">
                     Last Name<span className="text-red-600">*</span>
                   </label>
                   <input
                     type="text"
-                    name="lastName"
-                    value={formData.lastName}
+                    name="last_name"
+                    value={formData.last_Name}
                     onChange={handleChange}
                     className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter Last Name"
                   />
-
                 </div>
               </div>
 
@@ -226,10 +218,10 @@ const handleSubmit = async (e) => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    required
                     className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter Email"
                   />
-
                 </div>
                 <div>
                   <label className="block text-lg text-blacklight font-medium">
@@ -244,7 +236,6 @@ const handleSubmit = async (e) => {
                     className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter Company"
                   />
-
                 </div>
               </div>
 
@@ -259,14 +250,13 @@ const handleSubmit = async (e) => {
                   onChange={handleChange}
                   className="p-3 w-full rounded-md h-32 bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                   placeholder="Write Message"
-                />
-
+                ></textarea>
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-secondary text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-hoverclr transition duration-300"
+                className="w-full bg-secondary text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-hoverclr transition duration-300 cursor-pointer"
               >
                 SUBMIT
               </button>
@@ -297,8 +287,7 @@ const handleSubmit = async (e) => {
               {" "}
               <icons.MdOutlineLocationOn className="h-[40px] w-[40px]" />
             </span>
-            <h5 className="font-semibold text-xl text-primary">Main Office</h5>
-            <div className="flex flex-col gap-1 justify-center items-center text-blacklight">
+            <div className="mt-3 flex flex-col gap-1 justify-center items-center text-blacklight">
               <span>8362 Pines Boulevard,</span>
               <span>Pembroke Pines, FL 33024</span>
               <span>Telephone: 954-731-6340</span>
@@ -308,7 +297,7 @@ const handleSubmit = async (e) => {
           <div className="flex justify-center flex-col items-center gap-2 bg-[#E9FFF9] py-10 rounded-md">
             <span className="px-4 py-4 bg-green-600 rounded-full text-white">
               {" "}
-              <icons.MdOutlineLocationOn className="h-[40px] w-[40px]"/>
+              <icons.MdOutlineLocationOn className="h-[40px] w-[40px]" />
             </span>
             <h5 className="font-semibold text-xl text-primary">
               Wall Street Office

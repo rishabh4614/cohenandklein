@@ -1,6 +1,6 @@
 import React from "react";
 import images from "../../assets/Images/img"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Testimonial = [
   {
     image: images.meeting8,
@@ -22,7 +22,7 @@ const Testimonial = [
   },
   {
     image: images.meeting4,
-    title: "CK 6271: Hurricane Disaster Management Procedures",
+    title: "CK 6254: Global Warming Management Procedures",
     view: "Read Feedback",
   },
   {
@@ -43,7 +43,7 @@ const Testimonial = [
   },
   {
     image: images.meeting11,
-    title: "Florida - CK 700 Debt Collection Strategies & Techniques",
+    title: "CK 006: Saint Maarten, Sol Petroleum - Debt Collection and Performance",
     view: "Read Feedback",
   },
 ];
@@ -55,11 +55,15 @@ const getCkCode = (title) => {
 };
 
 const TestimonialSlider = () => {
+     const navigate =useNavigate();
+   const handletestimonial=()=>{
+    navigate('/testimonialread')
+   }
   return (
     <div className="roboto pb-[100px] padding-2xl lg:px-15 px-8 xl:mt-0 sm:mt-6 pt-18">
       <div className="mx-auto flex justify-center mb-[54px]">
         <div>
-          <h3 className="roboto-serif-font md:text-[32px] sm:text-2xl text-xl text-center text-primary font-semibold">
+          <h3 onClick={handletestimonial} className="roboto-serif-font cursor-pointer md:text-[32px] sm:text-2xl text-xl text-center text-primary font-semibold">
             1500+ Positive Testimonials With Proven Results
           </h3>
           <p className="roboto-serif-font font-bold sm:text-[21px] text-xs text-secondary pt-[10px] flex justify-center">

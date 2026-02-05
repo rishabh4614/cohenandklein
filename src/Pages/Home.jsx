@@ -14,19 +14,11 @@ const Home = () => {
       <>
       <Hero />
       <Testimonial />
-      <br>
-      </br>
-      <br>
-      </br>
-      <br>
-      </br>
-      <br>
-      </br>
-       <OnlineCources/>  
-       <Explore /> 
-       <Partner heading="Some Previous Partnerships, Collaborations and Training Assignments Conducted" className="py-[30px] pb-[100px]" className2="pt-15" />
+       <OnlineCources/>
+      <Explore />
+      <Partner heading="Some Previous Partnerships, Collaborations and Training Assignments Conducted" className="py-[30px] pb-[100px]" className2="pt-15" />
       <Training />
-      <TestimonialSlider /> 
+      <TestimonialSlider />
       <Cources />
       </>
     );

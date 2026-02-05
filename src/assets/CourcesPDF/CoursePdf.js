@@ -69,11 +69,11 @@ import pdf2024 from "./2024-TRAINING-COVER-SHEET-Ck-2.pdf"
 import pdf2026 from "./2026, Debt Collections and Revenue Management Training Scheduletion.pdf"
 import pdf202612 from "./2026, Debt Collections and Revenue Management Training Scheduletion1.pdf"
 import debtcolltraining from "./CK 7135 Debt Collections and Revenue Management for Banks and Other Financial Institutions.pdf"
-import Testimonials2025 from "./2025 Testimonials National Lotteriies Control Board Trinidad and Tobago.pdf"
-import Testimonials12032026 from "./2026 TESTIMONIALS JANUARY NATIONAL INSURANCE CORPORATION.pdf"
-import Testimonials120312032025 from "./12032025-Testimonial CK 6124G Debt Coll and Rev Mgt for Government Organizations.pdf"
-import Testimonials120312032026 from "./CK 7135 Debt Collections and Revenue Management for Banks and Other Financial Institutions-ROSEAU.pdf"
+import sometopicpdf from "./Some Topic.pdf"
+import historypdf from "./History-C&K.pdf"
 const CoursePdf = {
+    historypdf,
+    sometopicpdf,
     debtcolltraining,
     pdf2026,
     pdf202612,
@@ -144,11 +144,7 @@ const CoursePdf = {
     HealthSystemsOps,
     Covid19Protocol,
     PandemicEmergency,
-    Covid19Procedures,
-    Testimonials2025,
-    Testimonials12032026,
-    Testimonials120312032025,
-    Testimonials120312032026
+    Covid19Procedures
 };
 
 export default CoursePdf;

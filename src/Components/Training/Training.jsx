@@ -49,7 +49,7 @@ const Training = () => {
             Fort Lauderdale, Florida
           </h2>
           <p className="roboto-serif-font font-bold sm:text-[21px] text-xs text-secondary pt-[10px] flex justify-center">
-            In-house and virtual training can be arranged for following courses
+            In-house and virtual training can be arranged for the following courses
           </p>
         </div>
       </div>

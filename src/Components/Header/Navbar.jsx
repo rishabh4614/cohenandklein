@@ -15,11 +15,11 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full">
-      <div className="roboto md:block hidden bg-footerdownclr text-white px-4 sm:px-8 md:px-10 2xl:px-15 py-2">
+    <header className="sticky top-0 z-100 bg-white shadow">
+      <div className="roboto md:block hidden bg-footerdownclr text-white px-4 sm:px-8 md:px-10 2xl:px-15 py-1">
         <div className="flex flex-col md:flex-row flex-wrap justify-between items-center mx-auto text-center md:text-left">
-          <div className="text-sm sm:text-base md:text-lg mb-2 md:mb-0">
-            <div className="2xl:text-base sm:text-sm text-xs flex flex-col md:flex-row gap-2 md:gap-9 text-center md:text-left roboto-serif-font">
+          <div className="mb-2 md:mb-0">
+            <div className="2xl:text-[15px] sm:text-[13px] text-[11px] flex flex-col md:flex-row gap-2 md:gap-4 text-center md:text-left roboto-serif-font">
               <Link to="#" className="flex items-center gap-2 ">
                 <icons.MdOutlineEmail /> cohenandklein@cohenandklein.com
               </Link>
@@ -32,18 +32,18 @@ const Navbar = () => {
             </div>
           </div>
           <div className="text-center">
-            <Link className="2xl:text-base text-center  text-xs roboto-serif-font ">
+            <Link className="2xl:text-[15px] sm:text-[13px] text-[11px] text-center roboto-serif-font midcontent hidden lg:flex">
               Strategic Human Capital Development Training Courses
             </Link>
           </div>
-          <div className="flex flex-col sm:flex-row roboto-serif-font font-medium justify-center md:justify-between gap-4 sm:gap-6 md:gap-9">
+          <div className="flex flex-col sm:flex-row roboto-serif-font font-medium justify-center md:justify-between gap-4 sm:gap-6 md:gap-5">
             <Link to="#" className="flex gap-2.5 items-center">
               <img
                 src={icons.call}
                 className="h-4 w-4 sm:h-[15px] sm:w-[15px]"
                 alt="Call Icon"
               />
-              <p className="2xl:text-base sm:text-sm text-xs whitespace-nowrap">
+              <p className="2xl:text-[15px] sm:text-[13px] text-[11px] whitespace-nowrap">
                 954-731-6340
               </p>
             </Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
                 className="h-4 w-4 sm:h-[15px] sm:w-[15px]"
                 alt="Telephone Icon"
               />
-              <p className="2xl:text-base sm:text-sm text-xs whitespace-nowrap">
+              <p className="2xl:text-[15px] sm:text-[13px] text-[11px] whitespace-nowrap">
                 954-731-6606
               </p>
             </Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
                 className="h-4 w-4 sm:h-[15px] sm:w-[15px]"
                 alt="Call Icon"
               />
-              <p className="2xl:text-base sm:text-sm text-xs whitespace-nowrap">
+              <p className="2xl:text-[15px] sm:text-[13px] text-[11px] whitespace-nowrap">
                 212-709-8026
               </p>
             </Link>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 className="h-4 w-4 sm:h-[15px] sm:w-[15px]"
                 alt="Telephone Icon"
               />
-              <p className="2xl:text-base sm:text-sm text-xs whitespace-nowrap">
+              <p className="2xl:text-[15px] sm:text-[13px] text-[11px] whitespace-nowrap">
                 212-943-2300
               </p>
             </Link>
@@ -81,33 +81,33 @@ const Navbar = () => {
         </div>
       </div>
       <div className="bg-primary w-full roboto">
-        <div className="px-4 sm:px-8 padding-2xl py-5 flex items-center justify-between">
+        <div className="px-4 sm:px-8 padding-2xl py-2 flex items-center justify-between">
           <div className="flex-shrink-0">
             <Link to="/">
               <img
                 src={images.logo2}
                 alt="Logo"
-                className="w-[200px] md:w-[245px] lg:w-[280px] 2xl:w-[350px]"
+                className="logowidth w-[200px] md:w-[225px] lg:w-[240px]"
               />
             </Link>
           </div>
-
           <div className="hidden md:flex items-center">
             <ul className="flex flex-wrap justify-center items-center md:gap-3 navgap lg:gap-4 2xl:gap-8">
               {Links.map((data) => (
                 <li
                   key={data.id}
-                  className={`text-sm lg:text-base 2xl:text-lg font-medium hover:text-hoverclr duration-200 ${
-                    !data.external && location.pathname === data.link
+                  className={`text-sm lg:text-base 2xl:text-lg font-medium ${
+                    location.pathname === data.link
                       ? "text-hoverclr"
                       : "text-white"
-                  }`}
+                  } hover:text-hoverclr duration-200`}
                 >
-                  {data.external ? (
+                  {data.pdf ? (
                     <a
-                      href={data.link}
+                      href={data.pdf}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="text-sm lg:text-base 2xl:text-lg font-medium hover:text-hoverclr duration-200"
                     >
                       {data.name}
                     </a>
@@ -118,7 +118,6 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-
           <button
             className="menu-toggle block md:hidden text-white text-2xl"
             onClick={() => setMenuOpen(true)}
@@ -138,30 +137,18 @@ const Navbar = () => {
                 {Links.map((data) => (
                   <li
                     key={data.id}
-                    className={`text-lg font-medium hover:text-hoverclr duration-200 ${
-                      !data.external && location.pathname === data.link
+                    className={`text-lg font-medium ${
+                      location.pathname === data.link
                         ? "text-yellow-400"
                         : "text-white"
-                    }`}
+                    } hover:text-hoverclr duration-200`}
                   >
-                    {data.external ? (
-                      <a
-                        href={data.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => setMenuOpen(false)}
-                      >
-                        {data.name}
-                      </a>
-                    ) : (
-                      <Link to={data.link} onClick={() => setMenuOpen(false)}>
-                        {data.name}
-                      </Link>
-                    )}
+                    <Link to={data.link} onClick={() => setMenuOpen(false)}>
+                      {data.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
-
               <div className="mt-auto pt-6">
                 <Link to="/newsinner">
                   <img
@@ -174,11 +161,11 @@ const Navbar = () => {
             </div>
           )}
           <div className="flex-shrink-0 hidden md:block">
-            <Link to="/newsinner">
+            <Link to="/testimonialread">
               <img
                 src={images.logo2}
                 alt="Second Logo"
-                className="max-w-[180px] md:max-w-62.5 lg:max-w-87 rounded-[5px]"
+                className="w-[200px] md:w-[225px] lg:w-[250px] logowidth rounded-[5px]"
               />
             </Link>
           </div>

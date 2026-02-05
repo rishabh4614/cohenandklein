@@ -22,8 +22,89 @@ const Registration = () => {
       ? "Fax your registration form to 954-731-6606"
       : "Fill Your Contact Information";
 
+  // auto fill details in billing address
+  const [shippingData, setShippingData] = useState({
+    name: "",
+    address: "",
+    city: "",
+    state: "",
+    country: "",
+    zip: "",
+    email: "",
+  });
+  const [copyAddress, setCopyAddress] = useState(false);
+
+  useEffect(() => {
+    if (copyAddress) {
+      const companyName =
+        document.getElementById("participantname")?.value || "";
+      const address = document.getElementById("addressline1")?.value || "";
+      const city = document.getElementById("city")?.value || "";
+      const state = document.getElementById("state")?.value || "";
+      const country = document.getElementById("country")?.value || "";
+      const zip = document.getElementById("zip")?.value || "";
+      const email = document.getElementById("email")?.value || "";
+
+      setShippingData({
+        name: companyName,
+        address,
+        city,
+        state,
+        country,
+        zip,
+        email,
+      });
+    } else {
+      setShippingData({
+        name: "",
+        address: "",
+        city: "",
+        state: "",
+        country: "",
+        zip: "",
+        email: "",
+      });
+    }
+  }, [copyAddress]);
+
+  const [formData, setFormData] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const form = new FormData(e.target);
+  for (const key in shippingData) {
+    form.append(`billing_${key}`, shippingData[key]);
+  }
+  form.append("form_type", "registration"); // ✅ important!
+
+  const res = await fetch("/send.php", {
+    method: "POST",
+    body: form,
+  });
+
+  const text = await res.text();
+
+  if (text.trim() === "success") {
+    await fetch("/save.php", {
+      method: "POST",
+      body: form,
+    });
+
+    alert("Message sent successfully!");
+  } else {
+    alert("Failed to send message.");
+  }
+};
+
+
   return (
-    <div className=" mt-43">
+    <div>
       <div className="overflow-hidden relative w-full">
         <div
           ref={sliderRef}
@@ -51,13 +132,15 @@ const Registration = () => {
         {/* Title Section */}
         <div className="mx-auto flex justify-start ">
           <h3 className="roboto-serif-font text-[24px] md:text-[30px] lg:text-[34px] text-primary font-semibold max-w-[800px]">
-              {headingText}
+            {headingText}
           </h3>
         </div>
         <form
-          action="#"
+          onSubmit={handleSubmit}
           className="bg-[#F2F9FF] lg:p-15 sm:p-8 p-5 rounded-md shadow-md lg:mt-15 mt-8"
         >
+          <input type="hidden" name="_next" value="/thank-you" />
+          {/* KEEP ALL YOUR INPUT FIELDS HERE EXACTLY AS THEY ARE */}
           <div className="flex flex-col sm:gap-9 gap-5">
             <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-9 gap-4">
               <div className="flex flex-col gap-1.5">
@@ -68,7 +151,9 @@ const Registration = () => {
                   Name of Company<span className="text-red-600">*</span>
                 </label>
                 <input
+                  required
                   type="text"
+                  name="Name_of_Company"
                   id="companyname"
                   placeholder="Enter Company Name"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -79,12 +164,14 @@ const Registration = () => {
                   htmlFor="participantname"
                   className="text-[16px] font-medium  text-blacklight "
                 >
-                  Name Participant Name<span className="text-red-600">*</span>
+                  Name Participant<span className="text-red-600">*</span>
                 </label>
                 <input
                   type="text"
+                  required
                   id="participantname"
-                  placeholder="Enter your email"
+                  name="Name_participant"
+                  placeholder="Enter your name"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
               </div>
@@ -99,6 +186,8 @@ const Registration = () => {
               <input
                 type="text"
                 id="jobtitle"
+                required
+                name="Job_title_of_Participant"
                 placeholder="Enter Job Title"
                 className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
               />
@@ -113,7 +202,9 @@ const Registration = () => {
                 </label>
                 <input
                   type="text"
+                  required
                   id="workphone"
+                  name="Work_phone"
                   placeholder="Enter Work Phone"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -128,6 +219,7 @@ const Registration = () => {
                 <input
                   type="text"
                   id="ext"
+                  name="Ext"
                   placeholder="Enter Ext"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -142,6 +234,7 @@ const Registration = () => {
                 <input
                   type="text"
                   id="phone"
+                  name="Home_phone"
                   placeholder="Enter Home Phone"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -157,6 +250,8 @@ const Registration = () => {
                 </label>
                 <input
                   type="phone"
+                  required
+                  name="cell_number_1"
                   id="cellphone1"
                   placeholder="Enter Cell Phone #1"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -171,6 +266,7 @@ const Registration = () => {
                 </label>
                 <input
                   type="phone"
+                  name="cell_number_2"
                   id="cellphone2"
                   placeholder="Enter Cell Phone #2"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -186,6 +282,7 @@ const Registration = () => {
                 <input
                   type="text"
                   id="phone"
+                  name="fax"
                   placeholder="Enter Fax"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -201,7 +298,9 @@ const Registration = () => {
                 </label>
                 <input
                   type="email"
+                  required
                   id="email"
+                  name="email"
                   placeholder="Enter Email"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -216,6 +315,7 @@ const Registration = () => {
                 <input
                   type="email"
                   id="email"
+                  name="other_email"
                   placeholder="Enter Other Email"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -230,6 +330,7 @@ const Registration = () => {
                 <input
                   type="email"
                   id="email"
+                  name="Work_email"
                   placeholder="Enter Work Email"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -246,6 +347,7 @@ const Registration = () => {
                 <input
                   type="number"
                   id="number"
+                  name="C&K_Course_Number"
                   placeholder="Enter C&K Course Number"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -259,6 +361,7 @@ const Registration = () => {
                 </label>
                 <input
                   type="text"
+                  name="course_title"
                   id="coursetitle"
                   placeholder="Enter Course Title"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -274,8 +377,9 @@ const Registration = () => {
                   Course Date
                 </label>
                 <input
-                  type="calendar"
+                  type="date"
                   id="date"
+                  name="course_date"
                   placeholder="Enter Course Date"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -289,6 +393,7 @@ const Registration = () => {
                 </label>
                 <input
                   type="text"
+                  name="course_location(country)"
                   id="location"
                   placeholder="Enter Course Location"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -305,6 +410,7 @@ const Registration = () => {
                 </label>
                 <input
                   type="number"
+                  name="how_many_participant"
                   id="participatenumber"
                   placeholder="Enter NO. of Participant"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -319,6 +425,7 @@ const Registration = () => {
                 </label>
                 <input
                   type="number"
+                  name="Unit_price"
                   id="unitprice"
                   placeholder="Enter Unit Price"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -333,6 +440,7 @@ const Registration = () => {
                 </label>
                 <input
                   type="number"
+                  name="total_price"
                   id="totalprice"
                   placeholder="Enter Total Price"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -348,6 +456,7 @@ const Registration = () => {
               </label>
               <input
                 type="text"
+                name="contact_person"
                 id="contactperson"
                 placeholder="Enter Contact Person Name"
                 className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -363,6 +472,7 @@ const Registration = () => {
                 </label>
                 <input
                   type="text"
+                  name="address_line_1"
                   id="addressline1"
                   placeholder="Enter Address Line 1"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -377,6 +487,7 @@ const Registration = () => {
                 </label>
                 <input
                   type="text"
+                  name="address_line-2"
                   id="addressline2"
                   placeholder="Enter Address Line 2"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -394,6 +505,7 @@ const Registration = () => {
                 <input
                   type="text"
                   id="city"
+                  name="city"
                   placeholder="Enter city"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -408,6 +520,7 @@ const Registration = () => {
                 <input
                   type="text"
                   id="state"
+                  name="state"
                   placeholder="Enter State"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -424,6 +537,7 @@ const Registration = () => {
                 <input
                   type="text"
                   id="country"
+                  name="country"
                   placeholder="Enter Country"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -438,6 +552,7 @@ const Registration = () => {
                 <input
                   type="text"
                   id="zip"
+                  name="Zip"
                   placeholder="Enter Zip"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary"
                 />
@@ -449,7 +564,12 @@ const Registration = () => {
               </label>
               <div className="grid grid-cols-3 gap-4">
                 <label className="text-base font-medium text-blacklight flex items-center whitespace-nowrap">
-                  <input type="checkbox" className="mr-3 w-[18px] h-[18px]" />{" "}
+                  <input
+                    type="checkbox"
+                    className="mr-3 w-[18px] h-[18px]"
+                    checked={copyAddress}
+                    onChange={(e) => setCopyAddress(e.target.checked)}
+                  />
                   Check if same as shipping address
                 </label>
               </div>
@@ -464,7 +584,15 @@ const Registration = () => {
                 </label>
                 <input
                   type="text"
+                  name="name"
                   id="name"
+                  value={shippingData.name}
+                  onChange={(e) =>
+                    setShippingData({
+                      ...shippingData,
+                      name: e.target.value,
+                    })
+                  }
                   placeholder="Enter Billing Name"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -478,7 +606,15 @@ const Registration = () => {
                 </label>
                 <input
                   type="text"
+                  name="address"
                   id="billingaddress"
+                  value={shippingData.address}
+                  onChange={(e) =>
+                    setShippingData({
+                      ...shippingData,
+                      address: e.target.value,
+                    })
+                  }
                   placeholder="Enter Billing Address"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -494,7 +630,12 @@ const Registration = () => {
                 </label>
                 <input
                   type="text"
+                  name="city"
                   id="billingcity"
+                  value={shippingData.city}
+                  onChange={(e) =>
+                    setShippingData({ ...shippingData, city: e.target.value })
+                  }
                   placeholder="Enter Billing City"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -508,7 +649,12 @@ const Registration = () => {
                 </label>
                 <input
                   type="text"
+                  name="state"
                   id="billingstate"
+                  value={shippingData.state}
+                  onChange={(e) =>
+                    setShippingData({ ...shippingData, state: e.target.value })
+                  }
                   placeholder="Enter Billing State"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -524,6 +670,14 @@ const Registration = () => {
                 </label>
                 <input
                   type="text"
+                  name="country"
+                  value={shippingData.country}
+                  onChange={(e) =>
+                    setShippingData({
+                      ...shippingData,
+                      country: e.target.value,
+                    })
+                  }
                   id="billingcountry"
                   placeholder="Enter Billing Country"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -538,7 +692,12 @@ const Registration = () => {
                 </label>
                 <input
                   type="number"
+                  name="zip"
                   id="billingzip"
+                  value={shippingData.zip}
+                  onChange={(e) =>
+                    setShippingData({ ...shippingData, zip: e.target.value })
+                  }
                   placeholder="Enter Billing Zip"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -553,7 +712,12 @@ const Registration = () => {
               </label>
               <input
                 type="email"
+                name="email"
                 id="billingemail"
+                value={shippingData.email}
+                onChange={(e) =>
+                  setShippingData({ ...shippingData, email: e.target.value })
+                }
                 placeholder="Enter Billing Email"
                 className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
               />
@@ -568,6 +732,7 @@ const Registration = () => {
                 </label>
                 <input
                   type="number"
+                  name="credit_card_number"
                   id="creditcardnumber"
                   placeholder="Enter Credit Card Number"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -583,6 +748,7 @@ const Registration = () => {
                 <input
                   type="text"
                   id="namecard"
+                  name="name_of_card"
                   placeholder="Enter Name on Card"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -597,8 +763,9 @@ const Registration = () => {
                   Expiration Date
                 </label>
                 <input
-                  type="calendar"
+                  type="date"
                   id="expiredate"
+                  name="expire_date"
                   placeholder="Enter Expiration Date"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
                 />
@@ -612,6 +779,7 @@ const Registration = () => {
                 </label>
                 <input
                   type="number"
+                  name="security_code"
                   id="securitycode"
                   placeholder="Enter Security Code"
                   className="bg-white rounded-[3px] px-3 py-2.5 text-normal roboto focus:outline-none focus:ring-2 focus:ring-secondary text-base"
@@ -625,29 +793,53 @@ const Registration = () => {
               <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                 <div className="flex flex-col gap-[15px]">
                   <label className="text-base font-medium text-blacklight flex items-center">
-                    <input type="checkbox" className="mr-3 w-[18px] h-[18px]" />{" "}
+                    <input
+                      type="checkbox"
+                      name="Company-reputaition"
+                      className="mr-3 w-[18px] h-[18px]"
+                    />{" "}
                     Company Reputation
                   </label>
                   <label className="text-base font-medium text-blacklight flex items-center">
-                    <input type="checkbox" className="mr-3 w-[18px] h-[18px]" />{" "}
+                    <input
+                      type="checkbox"
+                      name="features"
+                      className="mr-3 w-[18px] h-[18px]"
+                    />{" "}
                     Features
                   </label>
                   <label className="text-base font-medium text-blacklight flex items-center">
-                    <input type="checkbox" className="mr-3 w-[18px] h-[18px]" />{" "}
+                    <input
+                      type="checkbox"
+                      name="recommendations"
+                      className="mr-3 w-[18px] h-[18px]"
+                    />{" "}
                     Recommendations
                   </label>
                 </div>
                 <div className="flex flex-col gap-[15px]">
                   <label className="text-base font-medium text-blacklight flex items-center">
-                    <input type="checkbox" className="mr-3 w-[18px] h-[18px]" />{" "}
+                    <input
+                      type="checkbox"
+                      name="benefits_to_employee"
+                      className="mr-3 w-[18px] h-[18px]"
+                    />{" "}
                     Benefits to Employee
                   </label>
                   <label className="text-base font-medium text-blacklight flex items-center">
-                    <input type="checkbox" className="mr-3 w-[18px] h-[18px]" />{" "}
+                    <input
+                      type="checkbox"
+                      name="others(insert_below)"
+                      className="mr-3 w-[18px] h-[18px]"
+                    />{" "}
                     Other (Insert Below)
                   </label>
                   <label className="text-base font-medium text-blacklight flex items-center">
-                    <input type="checkbox" className="mr-3 w-[18px] h-[18px]" />{" "}
+                    <input
+                      type="checkbox"
+                      name="benefits_to_corporations"
+                      className="mr-3 w-[18px] h-[18px]"
+                    />{" "}
                     Benefits to Corporations
                   </label>
                 </div>
@@ -671,7 +863,7 @@ const Registration = () => {
           </div>
           <button
             type="submit"
-            className="w-full mt-4 bg-secondary text-white py-2 px-4 rounded-md hover:bg-hoverclr transition duration-300"
+            className="w-full mt-4 bg-secondary text-white py-2 px-4 rounded-md hover:bg-hoverclr transition duration-300 cursor-pointer"
           >
             Submit
           </button>

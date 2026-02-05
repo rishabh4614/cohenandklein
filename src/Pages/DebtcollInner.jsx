@@ -1,7 +1,7 @@
 import images from "../assets/Images/img";
 import { useEffect, useRef, useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
-import { DebtCollData, NewsInnerdata, Pdfdata } from "../PdfData";
+import { DebtCollData, Pdfdata } from "../PdfData";
 import { GrPrevious, GrNext } from "react-icons/gr";
 import { MdStar, MdStarHalf } from "react-icons/md";
 import CoursePdf from "../assets/CourcesPDF/CoursePdf";
@@ -59,7 +59,7 @@ const DebtcollInner = () => {
   }, []);
 
   return (
-    <div className="roboto  mt-43">
+    <div className="roboto ">
       {/* 🔹 Banner Slider */}
       <div className="overflow-hidden relative w-full">
         <div
@@ -84,9 +84,9 @@ const DebtcollInner = () => {
           />
         </div>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between mx-auto">
         <div>
-          <div className="grid lg:grid-cols-4 grid-cols-2 gap-3 px-5 pt-2 pb-8 max-w-[1500px]">
+          <div className="grid lg:grid-cols-4 grid-cols-2 gap-3 px-5 pt-2 pb-8 max-w-[1800px] mx-auto">
             <button
               className="text-primary rounded-lg 2xl:py-2  py-2 px-2 2xl:text-xl lg:text-sm sm:text-[13px] roboto-serif-font cursor-pointer border border-primary hover:bg-primary hover:text-white transition-all"
               onClick={() => window.open(CoursePdf.debtcolltraining, "_blank")}
@@ -151,7 +151,7 @@ const DebtcollInner = () => {
 
             {/* Display Only the Selected Title’s Comments */}
             <ul className="flex flex-col sm:gap-6 gap-2 my-4">
-              {NewsInnerdata.map((comment, index) => (
+              {selectedData.comments.map((comment, index) => (
                 <li
                   key={index}
                   className="border-[1px] border-white hover:border-[1px] hover:border-gray-300 hover:shadow-lg rounded-2xl flex flex-col sm:gap-4 gap-3 sm:px-9 px-3 sm:py-7 py-3"
@@ -291,41 +291,7 @@ const DebtcollInner = () => {
             </button>
           </div>
         </div>
-        <div>
-          <div className="w-[420px] lg:flex hidden flex-col">
-            <div className="h-1070 overflow-y-auto relative custom-scrollbar">
-              <ul className="flex flex-col">
-                {/* Fixed Tab */}
-                <li className="bg-primary text-white 2xl:text-2xl sm:text-base text-base px-9 2xl:py-5 py-3 roboto-serif-font sticky top-0 z-10">
-                  Training Courses That You Should Attend Urgently
-                </li>
-
-                {/* Scrollable List */}
-                {Pdfdata.slice(0, 58).map((data, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center gap-4 px-9 py-5 bg-[#F2F9FF] cursor-pointer hover:bg-blue-100 transition"
-                    onClick={() => window.open(data.pdf, "_blank")}
-                  >
-                    <img
-                      src={images.pdf}
-                      alt="PDF Icon"
-                      className="w-11 h-11"
-                    />
-                    <div className="text-blacklight sm:text-lg text-sm font-semibold">
-                      <h4 className="inline">
-                        {data.id} - {data.title}
-                      </h4>
-                      <span className="text-gray-600 sm:text-base text-xs pl-1">
-                        {data.desc}
-                      </span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   );
