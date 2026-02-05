@@ -1,7 +1,7 @@
 import icons from "./assets/icons/icon";
 import images from "./assets/Images/img";
 import CoursePdf from "./assets/CourcesPDF/CoursePdf";
-// import videos from "./assets/videos/vdo";
+import videos from "./assets/videos/vdo";
 const HeroFourData = [
   { icon: icons.many, value: "Many", text: "Positive Testimonials" },
   { icon: icons.sixytythree, value: "58", text: "Categories of Courses" },
@@ -36,7 +36,7 @@ const ExploreCardData = [
   },
   {
     id: 3,
-    // videoUrl: videos.vdo1,
+    videoUrl: videos.vdo1,
     icon: images.cardicon3,
     image: images.card3,
     title: "Innovative Training Courses",

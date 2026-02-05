@@ -8,7 +8,7 @@ import Seminar from "../Pages/Seminar";
 import DebtCollection from "../Pages/DebtCollection";
 import NewsEvent from "../Pages/NewsEvent";
 import CallCenter from "../Pages/CallCenter";
-import NewsInner from "../Pages/newsInner";
+import NewsInner from "../Pages/NewsInner";
 import Callinner from "../Pages/Callinner";
 import DebtcollInner from "../Pages/DebtcollInner";
 import Categories from "../Pages/Categories";
