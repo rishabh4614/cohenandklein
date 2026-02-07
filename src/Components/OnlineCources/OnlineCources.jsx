@@ -8,23 +8,23 @@ const OnlineCources = () => {
   return (
     <div>
       <div className=" pt-9 padding-2xl lg:px-15 px-4 roboto">
-        <h2 className="text-primary 2xl:text-4xl lg:text-3xl 2xl:leading-[60px] sm:text-[26px] text-base text-center roboto-serif-font font-semibold mt-8">
+        <h2 className="text-primary 2xl:text-5xl lg:text-4xl 2xl:leading-[53px] sm:text-3xl text-base text-center roboto-serif-font font-semibold mt-8">
           <span className="text-white relative">
             <img
               src={images.Onlineyellow}
               alt=""
               className="absolute -z-10 -left-1 -bottom-1"
             />{" "}
-            Cohen & Klein Consulting Inc.{" "}
+            {/* Cohen & Klein Consulting Inc.{" "} */}
           </span>{" "}
-          Debt Collection and Revenue Management Trainers, Consultants as well as Customized Industry Training Providers
+          {/* Debt Collection and Revenue Management Trainers as well as Consultants */}
         </h2>
         <h2 className=" font-serif lg:text-[32px] sm:text-2xl text-base text-center text-primary font-semibold mt-5">
-          July To December 2025, Debt Collection And Revenue Management Virtual
-          Training Schedule
+          {/* July To December 2025, Debt Collection And Revenue Management Virtual
+          Training Schedule */}
         </h2>
-        <div className="flex xl:flex-row flex-col mt-8 gap-10 md:px-15 justify-center items-center">
-          <div className="flex justify-center md:justify-end lg:justify-center ">
+        <div className="flex xl:flex-row flex-col mt-8 gap-10 md:px-15 justify-center">
+          {/* <div className="flex justify-center md:justify-end lg:justify-center ">
             <div
               className="flex relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b] p-2 gap-[15px] items-center cursor-pointer"
               onClick={() =>
@@ -41,8 +41,8 @@ const OnlineCources = () => {
                 </h6>
               </div>
             </div>
-          </div>
-          <div className="flex justify-center md:justify-end lg:justify-center">
+          </div> */}
+          {/* <div className="flex justify-center md:justify-end lg:justify-center">
             <div
               className="flex relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b]  p-2 gap-[15px] items-center cursor-pointer"
               onClick={() =>
@@ -59,18 +59,18 @@ const OnlineCources = () => {
                 </h6>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="mx-auto flex justify-center mt-12 mb-20">
+        <div className="mx-auto">
           <div>
             <Link
               className="font-serif lg:text-[36px] sm:text-2xl text-base text-center text-primary font-semibold"
               onClick={() => window.open(CoursePdf.pdf202612, "_blank")}
             >
               2026, Debt Collections and Revenue Management Virtual Training
-              Schedule
+              Schedule - Zoom Platform
             </Link>
-            <div className="flex xl:flex-row flex-col mt-6 gap-10 md:px-15 justify-center items-center">
+            <div className="flex xl:flex-row flex-col mt-6 gap-10 md:px-15 justify-center">
               <div className="flex justify-center md:justify-end lg:justify-center ">
                 <div
                   className="flex relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b]  p-2 gap-[15px] items-center cursor-pointer"
@@ -79,7 +79,7 @@ const OnlineCources = () => {
                   <img src={images.pdf} alt="" className="max-w-12 h-12 " />
                   <div>
                     <h6 className="text-primary font-medium roboto-serif-font 2xl:text-xl sm:text-lg text-base">
-                      Click here for 2026 Debt Collection Training Schedule
+                    Click here for 2026 Debt Collection Training Schedule
                     </h6>
                   </div>
                 </div>
@@ -92,7 +92,7 @@ const OnlineCources = () => {
                   <img src={images.pdf} alt="" className="max-w-12 h-12 " />
                   <div>
                     <h6 className="text-primary font-medium roboto-serif-font 2xl:text-xl sm:text-lg text-base">
-                      Click here for 2026 Debt Collection Training Outline
+                    Click here for 2026 Debt Collection Training Outline
                     </h6>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ const OnlineCources = () => {
           {Onlinecourcesdata.sort((a, b) => a.id - b.id) // sort by id ascending
             .map((item, index) => (
               <div
-                onClick={() => window.open(CoursePdf.pdf2026, "_blank")}
+              onClick={() => window.open(CoursePdf.pdf2026, "_blank")}
                 key={index}
                 className="bg-[#F2F9FF] p-5 relative hover:drop-shadow-[0_0_40px_rgba(1,61,123,0.1)] group hover:bg-white duration-300 transition-all cursor-pointer flex flex-col justify-between min-h-[180px]" // added flex-col, justify-between, min-h
               >

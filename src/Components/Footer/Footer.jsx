@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="roboto-serif-font padding-xl lg:px-15 px-4 bg-primary py-15 text-white">
+      <div className="roboto-serif-font px-6 md:px-12 lg:px-24 xl:px-36 bg-primary py-15 text-white">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* First Column */}
           <div>
@@ -25,17 +25,11 @@ const Footer = () => {
               and your organization forward.
             </p>
             <div className="flex gap-4 pt-5 items-center">
-              <Link
-                to="https://www.youtube.com/@cohenklein8229"
-                target="_blank"
-              >
-                <FaYoutube className="w-7 h-7 hover:text-hoverclr" />
+              <Link to="https://www.youtube.com/@cohenklein8229" target="_blank">
+                <FaYoutube  className="w-7 h-7 hover:text-hoverclr" />
               </Link>
-              <Link
-                to="https://www.linkedin.com/company/cohen-and-klein-consulting-inc-/"
-                target="_blank"
-              >
-                <FaLinkedin className="w-6 h-6 hover:text-hoverclr" />
+              <Link to="https://www.linkedin.com/company/cohen-and-klein-consulting-inc-/" target="_blank">
+              <FaLinkedin className="w-6 h-6 hover:text-hoverclr"/>
               </Link>
             </div>
           </div>
@@ -46,24 +40,9 @@ const Footer = () => {
               {Links.map((data) => (
                 <li
                   key={data.id}
-                  className={`text-sm lg:text-base 2xl:text-lg font-medium ${
-                    location.pathname === data.link
-                      ? "text-hoverclr"
-                      : "text-white"
-                  } hover:text-hoverclr duration-200`}
+                  className="text-base hover:text-hoverclr duration-200"
                 >
-                  {data.pdf ? (
-                    <a
-                      href={data.pdf}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm lg:text-base 2xl:text-lg font-medium hover:text-hoverclr duration-200"
-                    >
-                      {data.name}
-                    </a>
-                  ) : (
-                    <Link to={data.link}>{data.name}</Link>
-                  )}
+                  <Link to={data.link}>{data.name}</Link>
                 </li>
               ))}
             </ul>
@@ -137,14 +116,13 @@ const Footer = () => {
         </div>
       </div>
       {/* Footer Bottom */}
-      <div className="bg-footerdownclr roboto-serif-font text-white py-5 padding-xl lg:px-15 px-4 flex flex-wrap md:flex-row justify-between items-center">
+      <div className="bg-footerdownclr roboto-serif-font text-white py-5 px-6 md:px-12 lg:px-36 flex flex-wrap md:flex-row justify-between items-center">
         <div className="text-center md:text-left sm:order-1 order-2 mt-2">
           <a href="#" alt="" className="">
             © All rights reserved cohenandklein.com
           </a>
-         
         </div>
-        <div className="flex flex-col lg:flex-row gap-2 md:gap-5 text-center md:text-left sm:order-2 order-1">
+        <div className="flex flex-col md:flex-row gap-2 md:gap-5 text-center md:text-left sm:order-2 order-1">
           <a href="#" className="flex items-center gap-2">
             <icons.MdOutlineEmail /> training@cohenandklein.com
           </a>
