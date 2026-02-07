@@ -121,11 +121,13 @@ const Footer = () => {
           <a href="#" alt="" className="">
             © All rights reserved cohenandklein.com
           </a>
-          <p className="text-xs">Designed and managed by www.samistics.com</p>
         </div>
         <div className="flex flex-col md:flex-row gap-2 md:gap-5 text-center md:text-left sm:order-2 order-1">
           <a href="#" className="flex items-center gap-2">
             <icons.MdOutlineEmail /> training@cohenandklein.com
+          </a>
+          <a href="#" className="flex items-center gap-2">
+            <icons.MdOutlineEmail /> collect@gate.net
           </a>
           <a href="#" className="flex items-center gap-2">
             <icons.MdOutlineEmail /> cohenandklein@cohenandklein.com

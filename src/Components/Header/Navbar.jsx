@@ -26,10 +26,15 @@ const Navbar = () => {
               <Link to="#" className="flex items-center gap-2">
                 <icons.MdOutlineEmail /> training@cohenandklein.com
               </Link>
+              <Link to="#" className="flex items-center gap-2">
+                <icons.MdOutlineEmail /> collect@gate.net
+              </Link>
             </div>
           </div>
           <div className="text-center">
-            <Link className="2xl:text-base text-center  text-xs roboto-serif-font ">Strategic Human Capital Development Training Courses</Link>
+            <Link className="2xl:text-base text-center  text-xs roboto-serif-font ">
+              Strategic Human Capital Development Training Courses
+            </Link>
           </div>
           <div className="flex flex-col sm:flex-row roboto-serif-font font-medium justify-center md:justify-between gap-4 sm:gap-6 md:gap-9">
             <Link to="#" className="flex gap-2.5 items-center">
@@ -59,7 +64,7 @@ const Navbar = () => {
                 alt="Call Icon"
               />
               <p className="2xl:text-base sm:text-sm text-xs whitespace-nowrap">
-              212-709-8026
+                212-709-8026
               </p>
             </Link>
             <Link to="#" className="flex gap-2.5 items-center">
@@ -69,10 +74,9 @@ const Navbar = () => {
                 alt="Telephone Icon"
               />
               <p className="2xl:text-base sm:text-sm text-xs whitespace-nowrap">
-              212-943-2300
+                212-943-2300
               </p>
             </Link>
-  
           </div>
         </div>
       </div>
@@ -83,24 +87,38 @@ const Navbar = () => {
               <img
                 src={images.logo2}
                 alt="Logo"
-                 className="w-[200px] md:w-[245px] lg:w-[280px] 2xl:w-[350px]"
+                className="w-[200px] md:w-[245px] lg:w-[280px] 2xl:w-[350px]"
               />
             </Link>
           </div>
+
           <div className="hidden md:flex items-center">
             <ul className="flex flex-wrap justify-center items-center md:gap-3 navgap lg:gap-4 2xl:gap-8">
               {Links.map((data) => (
                 <li
                   key={data.id}
-                  className={`text-sm lg:text-base 2xl:text-lg font-medium ${
-                    location.pathname === data.link ? "text-hoverclr" : "text-white"
-                  } hover:text-hoverclr duration-200`}
+                  className={`text-sm lg:text-base 2xl:text-lg font-medium hover:text-hoverclr duration-200 ${
+                    !data.external && location.pathname === data.link
+                      ? "text-hoverclr"
+                      : "text-white"
+                  }`}
                 >
-                  <Link to={data.link}>{data.name}</Link>
+                  {data.external ? (
+                    <a
+                      href={data.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {data.name}
+                    </a>
+                  ) : (
+                    <Link to={data.link}>{data.name}</Link>
+                  )}
                 </li>
               ))}
             </ul>
           </div>
+
           <button
             className="menu-toggle block md:hidden text-white text-2xl"
             onClick={() => setMenuOpen(true)}
@@ -120,16 +138,30 @@ const Navbar = () => {
                 {Links.map((data) => (
                   <li
                     key={data.id}
-                    className={`text-lg font-medium ${
-                      location.pathname === data.link ? "text-yellow-400" : "text-white"
-                    } hover:text-hoverclr duration-200`}
+                    className={`text-lg font-medium hover:text-hoverclr duration-200 ${
+                      !data.external && location.pathname === data.link
+                        ? "text-yellow-400"
+                        : "text-white"
+                    }`}
                   >
-                    <Link to={data.link} onClick={() => setMenuOpen(false)}>
-                      {data.name}
-                    </Link>
+                    {data.external ? (
+                      <a
+                        href={data.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {data.name}
+                      </a>
+                    ) : (
+                      <Link to={data.link} onClick={() => setMenuOpen(false)}>
+                        {data.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
+
               <div className="mt-auto pt-6">
                 <Link to="/newsinner">
                   <img

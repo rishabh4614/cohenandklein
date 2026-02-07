@@ -15,16 +15,16 @@ const OnlineCources = () => {
               alt=""
               className="absolute -z-10 -left-1 -bottom-1"
             />{" "}
-            Cohen & Klein Consulting Inc.{" "}
+            {/* Cohen & Klein Consulting Inc.{" "} */}
           </span>{" "}
-          Debt Collection and Revenue Management Trainers as well as Consultants
+          {/* Debt Collection and Revenue Management Trainers as well as Consultants */}
         </h2>
         <h2 className=" font-serif lg:text-[32px] sm:text-2xl text-base text-center text-primary font-semibold mt-5">
-          July To December 2025, Debt Collection And Revenue Management Virtual
-          Training Schedule
+          {/* July To December 2025, Debt Collection And Revenue Management Virtual
+          Training Schedule */}
         </h2>
         <div className="flex xl:flex-row flex-col mt-8 gap-10 md:px-15 justify-center">
-          <div className="flex justify-center md:justify-end lg:justify-center ">
+          {/* <div className="flex justify-center md:justify-end lg:justify-center ">
             <div
               className="flex relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b] p-2 gap-[15px] items-center cursor-pointer"
               onClick={() =>
@@ -41,8 +41,8 @@ const OnlineCources = () => {
                 </h6>
               </div>
             </div>
-          </div>
-          <div className="flex justify-center md:justify-end lg:justify-center">
+          </div> */}
+          {/* <div className="flex justify-center md:justify-end lg:justify-center">
             <div
               className="flex relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b]  p-2 gap-[15px] items-center cursor-pointer"
               onClick={() =>
@@ -59,16 +59,16 @@ const OnlineCources = () => {
                 </h6>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="mx-auto flex justify-center mt-12 mb-20">
+        <div className="mx-auto">
           <div>
             <Link
               className="font-serif lg:text-[36px] sm:text-2xl text-base text-center text-primary font-semibold"
               onClick={() => window.open(CoursePdf.pdf202612, "_blank")}
             >
               2026, Debt Collections and Revenue Management Virtual Training
-              Schedule
+              Schedule - Zoom Platform
             </Link>
             <div className="flex xl:flex-row flex-col mt-6 gap-10 md:px-15 justify-center">
               <div className="flex justify-center md:justify-end lg:justify-center ">

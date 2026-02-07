@@ -2,7 +2,65 @@ import images from "../assets/Images/img";
 import icons from "../assets/icons/icon";
 import { FaCheckCircle } from "react-icons/fa";
 import { LuPhoneCall } from "react-icons/lu";
+import React, { useState } from "react";
+
+
 const Contact = () => {
+
+const [formData, setFormData] = useState({
+  firstName: "",
+  lastName: "",
+  email: "",
+  company: "",
+  message: "",
+});
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const body = new URLSearchParams();
+  body.append("form_type", "contact");
+  body.append("first_name", formData.firstName);
+  body.append("last_name", formData.lastName);
+  body.append("email", formData.email);
+  body.append("company", formData.company);
+  body.append("message", formData.message);
+
+  try {
+    const res = await fetch("https://cohenandklein.com/save.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: body.toString(),
+    });
+
+    const text = await res.text();
+
+    if (text.trim() === "saved") {
+      alert("Form submitted successfully");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        message: "",
+      });
+    } else {
+      alert("Submission failed: " + text);
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Server error");
+  }
+};
+
   return (
     <div className="roboto  mt-43">
       <div>
@@ -112,11 +170,11 @@ const Contact = () => {
           <div className="w-full lg:w-[1000px] h-[580px] overflow-hidden order-2 lg:order-1">
             <iframe
               className="w-full h-full"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.063233087325!2d-80.26326082456999!3d26.00729057717653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ab5b9e35441f%3A0x3161a7ae769e01b7!2s8362%20Pines%20Blvd%2C%20Pembroke%20Pines%2C%20FL%2033024%2C%20USA!5e0!3m2!1sen!2sus!4v1711567890123!5m2!1sen!2sus"
-              allowFullScreen=""
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3024.5078705997876!2d-74.010049!3d40.706835!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1702a2ceab%3A0x7537a5035589668!2s30%20Wall%20St%2C%20New%20York%2C%20NY%2010005!5e0!3m2!1sen!2sus!4v1770231689663!5m2!1sen!2sus"
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            />
           </div>
 
           {/* Contact Form Section */}
@@ -124,7 +182,7 @@ const Contact = () => {
             <h2 className="text-3xl md:text-4xl text-primary font-semibold mb-6 text-left roboto-serif-font">
               Contact Us
             </h2>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               {/* First Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -133,19 +191,27 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
                     className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter First Name"
                   />
                 </div>
+                
                 <div>
                   <label className="block text-lg text-blacklight font-medium">
                     Last Name<span className="text-red-600">*</span>
                   </label>
                   <input
                     type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
                     className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter Last Name"
                   />
+
                 </div>
               </div>
 
@@ -157,9 +223,13 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter Email"
                   />
+
                 </div>
                 <div>
                   <label className="block text-lg text-blacklight font-medium">
@@ -167,10 +237,14 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
                     required
                     className="p-3 w-full rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Enter Company"
                   />
+
                 </div>
               </div>
 
@@ -180,9 +254,13 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   className="p-3 w-full rounded-md h-32 bg-white focus:outline-none focus:ring-2 focus:ring-secondary"
                   placeholder="Write Message"
-                ></textarea>
+                />
+
               </div>
 
               {/* Submit Button */}
@@ -210,6 +288,7 @@ const Contact = () => {
             </h5>
             <div className="flex flex-col gap-1 justify-center items-center text-blacklight">
               <span>cohenandklein@cohenandklein.com</span>
+              <span>collect@gate.net</span>
               <span>training@cohenandklein.com</span>
             </div>
           </div>
@@ -220,7 +299,7 @@ const Contact = () => {
             </span>
             <h5 className="font-semibold text-xl text-primary">Main Office</h5>
             <div className="flex flex-col gap-1 justify-center items-center text-blacklight">
-              <span>8362 Pines Boulevard, Ste. 289</span>
+              <span>8362 Pines Boulevard,</span>
               <span>Pembroke Pines, FL 33024</span>
               <span>Telephone: 954-731-6340</span>
               <span>Fax: 954-731-6606</span>
