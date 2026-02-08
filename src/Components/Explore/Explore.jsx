@@ -91,36 +91,36 @@ const Explore = () => {
         </div>
 
         {isPopupOpen && (
-          <div
-            className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-70 z-50"
-            onClick={handleClosePopup} // Close when clicking outside
-          >
-            <div
-              className="bg-white p-4 rounded-lg relative shadow-lg w-[90%] max-w-[1200px] aspect-video"
-              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
-            >
-              {/* Close Button */}
-              <button
-                className="absolute top-2 right-2 bg-black px-3 py-1 text-white text-2xl rounded z-10"
-                onClick={handleClosePopup}
-              >
-               Close
-              </button>
+  <div
+    className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-70 z-50"
+    onClick={handleClosePopup}
+  >
+    <div
+      className="bg-white p-4 rounded-lg relative shadow-lg w-[90%] max-w-[1200px]"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* Close Button */}
+      <button
+        className="absolute top-3 right-3 bg-black px-4 py-2 text-white text-lg rounded z-[9999]"
+        onClick={handleClosePopup}
+      >
+        ✕ Close
+      </button>
 
-              {/* Responsive Iframe */}
-              <div className="relative w-full h-0 pb-[56.25%]">
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src={videoUrl}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="autoplay; encrypted-media; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        )}
+      {/* Responsive Iframe */}
+      <div className="relative w-full h-0 pb-[56.25%] z-10">
+        <iframe
+          className="absolute top-0 left-0 w-full h-full z-0"
+          src={videoUrl}
+          title="PDF Viewer"
+          frameBorder="0"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+)}
       </div>
     </div>
   );

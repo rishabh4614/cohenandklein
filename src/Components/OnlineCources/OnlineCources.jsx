@@ -67,8 +67,10 @@ const OnlineCources = () => {
               className="font-serif lg:text-[36px] sm:text-2xl text-base text-center text-primary font-semibold"
               onClick={() => window.open(CoursePdf.pdf202612, "_blank")}
             >
-              2026, Debt Collections and Revenue Management Virtual Training
+              <h1 className="text-primary 2xl:text-[54px] lg:text-4xl 2xl:leading-[53px] sm:text-3xl text-base text-center roboto-serif-font font-semibold break-words">
+                2026, Debt Collections and Revenue Management Virtual Training
               Schedule - Zoom Platform
+              </h1>
             </Link>
             <div className="flex xl:flex-row flex-col mt-6 gap-10 md:px-15 justify-center">
               <div className="flex justify-center md:justify-end lg:justify-center ">
