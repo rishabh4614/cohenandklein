@@ -15,7 +15,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-100 bg-white shadow">
+    <header className="sticky top-0 z-50 bg-white shadow">
+
       <div className="roboto md:block hidden bg-footerdownclr text-white px-4 sm:px-8 md:px-10 2xl:px-15 py-1">
         <div className="flex flex-col md:flex-row flex-wrap justify-between items-center mx-auto text-center md:text-left">
           <div className="mb-2 md:mb-0">
