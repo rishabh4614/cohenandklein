@@ -19,6 +19,8 @@ import Testimonialread from "../Pages/Testimonialread";
 import Home from "../Pages/Home";
 import Thankyou from "../Pages/Thankyou";
 import Contact from "../Pages/Contact";
+import Video from "../Pages/Video";
+
 
 const AppRoutes = () => {
   return (
@@ -44,6 +46,7 @@ const AppRoutes = () => {
         <Route path="*" element={<NotFound />} />
         <Route path="/testimonialread" element={<Testimonialread />} />
         <Route path="/thankyou" element={<Thankyou />} />
+        <Route path="/video" element={<Video />} />
       </Routes>
       <Footer />
     </Router>
