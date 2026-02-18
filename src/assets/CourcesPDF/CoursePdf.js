@@ -73,6 +73,7 @@ import Testimonials2025 from "./2025 Testimonials National Lotteriies Control Bo
 import Testimonials12032026 from "./2026 TESTIMONIALS JANUARY NATIONAL INSURANCE CORPORATION.pdf"
 import Testimonials120312032025 from "./12032025-Testimonial CK 6124G Debt Coll and Rev Mgt for Government Organizations.pdf"
 import Testimonials120312032026 from "./CK 7135 Debt Collections and Revenue Management for Banks and Other Financial Institutions.pdf"
+import Testimonials131412032026 from "./CK 700 DEBT COLLECTIONS AND REV MGT PROCEDURES 2026.pdf"
 import sometopicpdf from "./Some Topic.pdf"
 import historypdf from "./History-C&K.pdf"
 const CoursePdf = {
@@ -152,7 +153,8 @@ const CoursePdf = {
     Testimonials2025,
     Testimonials12032026,
     Testimonials120312032025,
-    Testimonials120312032026
+    Testimonials120312032026,
+    Testimonials131412032026
 };
 
 export default CoursePdf;

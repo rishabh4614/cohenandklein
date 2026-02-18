@@ -54,6 +54,19 @@ const Testimonial = () => {
                 </Link>
                 <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
               </div>
+              <div className="  flex gap-3 items-center max-w-[660px]  border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
+                
+                <Link
+                  to="#"
+                  className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em] "
+                  onClick={() =>
+                    window.open(CoursePdf.Testimonials131412032026, "_blank")
+                  }
+                >
+                  Debt Collections and Revenue Management Regional Training Testimonials from our Valued Clients
+                </Link>
+                
+              </div>
             </div>
           </div>
         </div>
