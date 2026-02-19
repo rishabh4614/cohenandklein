@@ -25,8 +25,7 @@ const Testimonial = () => {
                     window.open(CoursePdf.debtcolltraining, "_blank")
                   }
                 >
-                  Debt Collection and revenue management training for banks and
-                  other financial institutions
+                  Debt Collection and revenue management training testimonials for banks and other financial institutions
                 </Link>
                 <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
               </div>
