@@ -25,7 +25,7 @@ const Explore = () => {
   };
 
   return (
-    <div className=" pt-9 padding-2xl lg:px-15 px-4 roboto">
+    <div className=" pt-9 padding-2xl lg:px-15 px-5 roboto">
       <div className="mx-auto flex justify-center">
         <div>
           <h3 className="font-serif sm:text-[36px] text-xl text-center text-primary font-semibold">
@@ -37,7 +37,7 @@ const Explore = () => {
         </div>
       </div>
       <div className="py-[70px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 justify-center">
 
           {ExploreCardData.map((data, index) => (
             <div
@@ -101,7 +101,7 @@ const Explore = () => {
     >
       {/* Close Button */}
       <button
-        className="absolute top-3 right-3 bg-black px-4 py-2 text-white text-lg rounded z-[9999]"
+        className="absolute top-3 right-3 bg-black px-5 py-2 text-white text-lg rounded z-[9999]"
         onClick={handleClosePopup}
       >
         ✕ Close

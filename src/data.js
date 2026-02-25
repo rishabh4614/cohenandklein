@@ -50,6 +50,14 @@ const ExploreCardData = [
     title: "Debt Collections and Strategies and Techniques for Banks and Other Financial Institutions – National Bank of Dominica, Roseau", 
     desc: "",
   },
+  {
+    id: 5,
+    videoUrl: CoursePdf.Testimonials131412032027, // Make sure this is a direct PDF URL
+    icon: images.cardicon1,
+    image: images.pdf,
+    title: "Human Resource Management Procedures for Public & Private Corporations- St. Christopher Air & Sea Ports Authority (SCASPA), St.Kits & Nevis", 
+    desc: "",
+  },
   // {
   //   id: 1,
   //   videoUrl: CoursePdf.anniversry21, // Make sure this is a direct PDF URL
