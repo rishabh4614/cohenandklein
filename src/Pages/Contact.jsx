@@ -287,8 +287,8 @@ const handleSubmit = async (e) => {
               Email Address
             </h5>
             <div className="flex flex-col gap-1 justify-center items-center text-blacklight">
-              <span>cohenandklein@cohenandklein.com</span>
-              <span>collect@gate.net</span>
+              {/* <span>cohenandklein@cohenandklein.com</span>
+              <span>collect@gate.net</span> */}
               <span>training@cohenandklein.com</span>
             </div>
           </div>

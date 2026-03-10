@@ -37,58 +37,32 @@ const Explore = () => {
         </div>
       </div>
       <div className="py-[70px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 justify-center">
-
-          {ExploreCardData.map((data, index) => (
-            <div
-              key={index}
-              className="max-w-[410px] w-full rounded-lg overflow-hidden drop-shadow-[0_0_40px_rgba(1,61,123,0.1)] bg-white p-[20px] cursor-pointer"
-              onClick={() => handleCardClick(index, data.videoUrl)}
-            >
-              <div className="relative flex items-center justify-center h-[200px] bg-[#fff1f1] rounded-xl">
-                {/* Icon */}
-                {/* <img
-                  src={data.icon}
-                  alt=""
-                  className="absolute p-[12px] bg-white"
-                /> */}
-
-                {/* Play/PDF Icon */}
-                <div
-                  // className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-2.5 py-2.5 ${
-                  //   index === 0 ? "bg-red-600" : "bg-red-600"
-                  // } rounded-full flex justify-center items-center border-2 border-white`}
-                >
-                  {/* <FaFilePdf className="text-white text-xl" /> */}
-                  {/* {index === 0 ? (
-                    <FaFilePdf className="text-white text-xl" />
-                  ) : (
-                   <FaFilePdf className="text-white text-xl" />
-                  )} */}
-                </div>
-
-                {/* Card Image */}
-                <img
-                  src={data.image}
-                  // alt="Card Image"
-                  className="w-[80px] h-[100px] object-contain"
-
-                />
-              </div>
-
-              {/* Card Content */}
-             <div className="pt-4 flex flex-col gap-3">
-            <h2 className="text-[18px] font-semibold text-primary">
-              {data.title}
-            </h2>
-            <p className="text-[#021326] text-sm">
-              {data.desc}
-            </p>
-          </div>
-
-            </div>
-          ))}
-        </div>
+        <div className="flex flex-wrap justify-center gap-6">
+  {ExploreCardData.map((data, index) => (
+    <div
+      key={index}
+      // Replaced the grid-cols widths with responsive flex width calculations
+      className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(20%-1.2rem)] max-w-[410px] rounded-lg overflow-hidden drop-shadow-[0_0_40px_rgba(1,61,123,0.1)] bg-white p-[20px] cursor-pointer"
+      onClick={() => handleCardClick(index, data.videoUrl)}
+    >
+      <div className="relative flex items-center justify-center h-[200px] bg-[#fff1f1] rounded-xl">
+        <img
+          src={data.image}
+          className="w-[80px] h-[100px] object-contain"
+          alt={data.title} // added an alt tag for best practices!
+        />
+      </div>
+      <div className="pt-4 flex flex-col gap-3">
+        <h2 className="text-[18px] font-semibold text-primary">
+          {data.title}
+        </h2>
+        <p className="text-[#021326] text-sm">
+          {data.desc}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
 
         {isPopupOpen && (
   <div
@@ -106,8 +80,6 @@ const Explore = () => {
       >
         ✕ Close
       </button>
-
-      {/* Responsive Iframe */}
       <div className="relative w-full h-0 pb-[56.25%] z-10">
         <iframe
           className="absolute top-0 left-0 w-full h-full z-0"

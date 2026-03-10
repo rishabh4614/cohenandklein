@@ -47,7 +47,7 @@ const ExploreCardData = [
     videoUrl: CoursePdf.Testimonials120312032026, // Make sure this is a direct PDF URL
     icon: images.cardicon1,
     image: images.pdf,
-    title: "Debt Collections and Strategies and Techniques for Banks and Other Financial Institutions – National Bank of Dominica, Roseau", 
+    title: "Debt Collections and Strategies and Techniques for Banks and Other Financial Institutions – National Bank of Dominica, Roseau, Dominica", 
     desc: "",
   },
   {
@@ -55,7 +55,23 @@ const ExploreCardData = [
     videoUrl: CoursePdf.Testimonials131412032027, // Make sure this is a direct PDF URL
     icon: images.cardicon1,
     image: images.pdf,
-    title: "Human Resource Management Procedures for Public & Private Corporations- St. Christopher Air & Sea Ports Authority (SCASPA), St.Kits & Nevis", 
+    title: "Human Resource Management Procedures for Public & Private Corporations- St. Christopher Air & Sea Ports Authority (SCASPA), St. Kitts & Nevis", 
+    desc: "",
+  },
+  {
+    id: 6,
+    videoUrl: CoursePdf.Testimonials131412032028, // Make sure this is a direct PDF URL
+    icon: images.cardicon1,
+    image: images.pdf,
+    title: "CK 700A Debt Collection and Revenue Management for Utility Corporations: St. Kitts Electricity Company Limited (SKELEC), St. Kitts", 
+    desc: "",
+  },
+  {
+    id: 7,
+    videoUrl: CoursePdf.Testimonials131412032029, // Make sure this is a direct PDF URL
+    icon: images.cardicon1,
+    image: images.pdf,
+    title: "CK 700A Debt Collection and Revenue Management for Utility Corporations: Dominica Electricity Services Ltd. (DOMLEC), Dominica", 
     desc: "",
   },
   // {

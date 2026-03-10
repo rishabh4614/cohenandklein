@@ -21,15 +21,15 @@ const Navbar = () => {
         <div className="flex flex-col md:flex-row flex-wrap justify-between items-center mx-auto text-center md:text-left">
           <div className="mb-2 md:mb-0">
             <div className="2xl:text-[15px] sm:text-[13px] text-[11px] flex flex-col md:flex-row gap-2 md:gap-4 text-center md:text-left roboto-serif-font">
-              <Link to="#" className="flex items-center gap-2 ">
+              {/* <Link to="#" className="flex items-center gap-2 ">
                 <icons.MdOutlineEmail /> cohenandklein@cohenandklein.com
-              </Link>
+              </Link> */}
               <Link to="#" className="flex items-center gap-2">
                 <icons.MdOutlineEmail /> training@cohenandklein.com
               </Link>
-              <Link to="#" className="flex items-center gap-2">
+              {/* <Link to="#" className="flex items-center gap-2">
                 <icons.MdOutlineEmail /> collect@gate.net
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="text-center">

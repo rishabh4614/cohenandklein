@@ -75,6 +75,9 @@ import Testimonials120312032025 from "./12032025-Testimonial CK 6124G Debt Coll 
 import Testimonials120312032026 from "./CK 7135 Debt Collections and Revenue Management for Banks and Other Financial Institutions.pdf"
 import Testimonials131412032026 from "./CK 700 DEBT COLLECTIONS AND REV MGT PROCEDURES 2026.pdf"
 import Testimonials131412032027 from "./CK 1400 HUMAN RESOURCES TESTIMONIALS 2026.pdf"
+
+import Testimonials131412032028 from "./2026 TESTIMONIALS FEVBRUARY CK 700A UTILITY CORPORATIONS SKELEC.pdf"
+import Testimonials131412032029 from "./2026 TESTIMONIALS FEVBRUARY CK 700A UTILITY CORPORATIONS.pdf"
 import sometopicpdf from "./Some Topic.pdf"
 import historypdf from "./History-C&K.pdf"
 const CoursePdf = {
@@ -156,7 +159,9 @@ const CoursePdf = {
     Testimonials120312032025,
     Testimonials120312032026,
     Testimonials131412032026,
-    Testimonials131412032027
+    Testimonials131412032027,
+    Testimonials131412032028,
+    Testimonials131412032029
 };
 
 export default CoursePdf;
