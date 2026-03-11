@@ -107,10 +107,10 @@ const Hero = () => {
           </div>
           <div className="flex-col flex gap-12 sm:order-2 order-1">
             <div className=" flex flex-col md:gap-7 gap-4 items-center 2xl:mt-4.5">
-              <h2 className="text-primary 2xl:text-[54px] lg:text-4xl 2xl:leading-[53px] sm:text-3xl text-base text-center roboto-serif-font font-semibold break-words">
+              <h2 className="text-primary 2xl:text-[34px] lg:text-4xl 2xl:leading-[53px] sm:text-3xl text-base text-center roboto-serif-font font-semibold break-words">
                 Strategic Corporate Training Programs For Private & Public Sector Institutions
               </h2>
-              <h2 className="text-primary 2xl:text-[54px] lg:text-4xl 2xl:leading-[53px] sm:text-3xl text-base text-center roboto-serif-font font-semibold break-words">
+              <h2 className="text-primary 2xl:text-[34px] lg:text-4xl 2xl:leading-[53px] sm:text-3xl text-base text-center roboto-serif-font font-semibold break-words">
                 Discover from our 1000+ Premium Courses!
               </h2>
               <p className="text-secondary 2xl:text-2xl lg:text-xl sm:text-base text-xs  font-medium roboto-serif-font xl:max-w-[800px] lg:max-w-[700px] sm:max-w-[600px] max-w-[400px] text-center relative lg:leading-10 sm:leading-8 leading-6">
@@ -128,7 +128,7 @@ const Hero = () => {
             </div>
 
             {/* Search Input Section */}
-            <div className="  flex justify-between w-full -mt-6 sm:gap-12 gap-2 2xl:max-w-[1154px]  sm:max-w-[800px] max-w-[400px] sm:py-[15px] py-1 sm:pl-5 pl-2 sm:pr-[15px] shadow-[0_4px_40px_rgba(1,61,123,0.10)] border border-[rgba(0,43,88,0.1)] bg-white  rounded-lg relative">
+            <div className="flex justify-between w-full max-w-[1154px] mx-auto -mt-6 sm:gap-12 gap-2 sm:py-[15px] py-1 sm:pl-5 pl-2 sm:pr-[15px] shadow-[0_4px_40px_rgba(1,61,123,0.10)] border border-[rgba(0,43,88,0.1)] bg-white rounded-lg relative">
               <div className="flex flex-row sm:gap-4 gap-2 items-center w-[90%]">
                 {/* Categories Button */}
                 <div className="relative">
