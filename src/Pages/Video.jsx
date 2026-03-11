@@ -3,43 +3,71 @@ import React, { useState } from "react";
 const videoData = [
   {
     id: 1,
+<<<<<<< HEAD
     videoUrl: "https://www.youtube.com/embed/ppCueXBI44Y",
+=======
+    videoUrl: "https://youtu.be/ppCueXBI44Y",
+>>>>>>> db6d911d2b0855f4dd03d57674bf8ca866a6335e
     title: "From Antigua to the World: The Journey of Cohen & Klein Consulting, Inc. It’s not where you start, but where you finish. ",
     desc: "In this video, Cohen & Klein & Consulting, Inc. shares its remarkable journey. This is a story of resilience, the pursuit of excellence, and a commitment to empowering organizations and individuals globally through various professional customized corporate training courses and strategic consulting services.",
   },
   {
     id: 2,
+<<<<<<< HEAD
     videoUrl: "https://www.youtube.com/embed/IlTQvt5RPlM",
+=======
+    videoUrl: "https://youtu.be/IlTQvt5RPlM",
+>>>>>>> db6d911d2b0855f4dd03d57674bf8ca866a6335e
     title: "The Gold Standard in Debt Recovery Management Training Courses: Cohen & Klein Consulting Recognition | Cohen & Klein Consulting, Inc.",
     desc: "What does it take to become a top-tier debt collections and revenue management collections professional? In this video, Cohen & Klein Consulting, Inc. introduces the premier recognition and training standard by Cohen & Klein Consulting that is transforming the landscape of debt collections recovery and revenue management procedures.",
   },
   {
     id: 3,
+<<<<<<< HEAD
     videoUrl: "https://www.youtube.com/embed/LQ6RsPs3c-A",
+=======
+    videoUrl: "https://youtu.be/LQ6RsPs3c-A",
+>>>>>>> db6d911d2b0855f4dd03d57674bf8ca866a6335e
     title: "Elevating Standards: National Social Insurance & Debt Collections Training | Cohen & Klein Consulting, Inc.",
     desc: "Effective revenue recovery in the public sector requires more than just vague efforts—it requires specialized expertise, empathy, and strategic excellence. In this video, Cohen & Klein Consulting, takes you inside a specialized training programs hosted by Cohen & Klein Consulting, Inc.",
   },
   {
     id: 4,
+<<<<<<< HEAD
     videoUrl: "https://www.youtube.com/embed/q-nOTrHW9V0",
+=======
+    videoUrl: "https://youtu.be/q-nOTrHW9V0",
+>>>>>>> db6d911d2b0855f4dd03d57674bf8ca866a6335e
     title: "Strategies for Success: Debt Collections & Utilities Management | Cohen & Klein Consulting, Inc.",
     desc: "Managing revenue in the utilities sector—whether it’s water, electricity, or telecommunications—requires a unique blend of firm recovery strategies and exceptional customer relations. In this video, Cohen & Klein Consulting, Inc., takes you inside a specialized training session focused on the high-stakes world of Utilities Revenue Recovery.",
   },
   {
   id: 5,
+<<<<<<< HEAD
   videoUrl: "https://www.youtube.com/embed/UIWGiSZqytQ",
+=======
+  videoUrl: "https://youtu.be/UIWGiSZqytQ",
+>>>>>>> db6d911d2b0855f4dd03d57674bf8ca866a6335e
   title: "Our Vision & Mission: The Driving Force Behind Cohen & Klein Consulting, Inc. What drives a global consulting firm to achieve excellence?",
   desc: "In this video, it shows the heart and soul of Cohen & Klein Consulting—our Vision and Mission. More than just words on a wall, our mission is to bridge the skills gap, empower professionals, and provide organizations with the strategic frameworks they need to thrive in a competitive global economy. From debt collections and revenue management training to leadership and professional development, Cohen & Klein Consulting, are committed to being the catalyst for organizational transformation."
 },
 {
   id: 6,
+<<<<<<< HEAD
   videoUrl: "https://www.youtube.com/embed/vNS3Dse8lqM",
+=======
+  videoUrl: "https://youtu.be/vNS3Dse8lqM",
+>>>>>>> db6d911d2b0855f4dd03d57674bf8ca866a6335e
   title: "Is your debt collection department process is proactive or reactive?",
   desc: "Video 102 of our series, Cohen & Klein Consulting, Inc. explores how to streamline and establish a highly effective debt collections and revenue department. Uncollected accounts don’t just sit idle—they grow more complex and harder to resolve over time."
 },
 {
   id: 7,
+<<<<<<< HEAD
   videoUrl: "https://www.youtube.com/embed/Nbq82TIDBvw",
+=======
+  videoUrl: "https://youtu.be/Nbq82TIDBvw",
+>>>>>>> db6d911d2b0855f4dd03d57674bf8ca866a6335e
   title: "Transforming Professional Standards: Inside Cohen & Klein Consulting’s Training Excellence ",
   desc: "Success isn't just about what you know—it's about how you apply it. This video, takes you inside a live training session hosted by Cohen & Klein Consulting, showcasing the energy, engagement, and expertise that define our world-class professional programs."
 }
