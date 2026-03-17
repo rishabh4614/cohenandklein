@@ -33,15 +33,21 @@ const videoData = [
 },
 {
   id: 6,
-  videoUrl: "https://www.youtube.com/embed/vNS3Dse8lqM",
+  videoUrl: "https://www.youtube.com/embed/Nbq82TIDBvw",
   title: "Is your debt collection department process is proactive or reactive?",
   desc: "Video 102 of our series, Cohen & Klein Consulting, Inc. explores how to streamline and establish a highly effective debt collections and revenue department. Uncollected accounts don’t just sit idle—they grow more complex and harder to resolve over time."
 },
 {
   id: 7,
-  videoUrl: "https://www.youtube.com/embed/Nbq82TIDBvw",
+  videoUrl: "https://www.youtube.com/embed/qJ0Z16ps7Ls",
   title: "Transforming Professional Standards: Inside Cohen & Klein Consulting’s Training Excellence ",
   desc: "Success isn't just about what you know—it's about how you apply it. This video, takes you inside a live training session hosted by Cohen & Klein Consulting, showcasing the energy, engagement, and expertise that define our world-class professional programs."
+},
+{
+  id: 8,
+  videoUrl: "https://www.youtube.com/embed/vNS3Dse8lqM",
+  title: "Streamline Your Debt Collection & Revenue Department",
+  desc: "This video from Cohen & Klein Consulting, Inc. outlines their comprehensive training courses designed to help private and public sector institutions effectively handle delinquent accounts. Whether you're dealing with government tax collections, utility payments, or healthcare claims, this training equips your staff—from new collectors to management—with practical, ethical, and results-driven strategies."
 }
 
 
@@ -65,7 +71,7 @@ const Video = () => {
     <div className="pt-9 padding-2xl lg:px-15 px-4 roboto">
       <div className="mx-auto flex justify-center">
         <h3 className="font-serif sm:text-[36px] text-xl text-center text-primary font-semibold">
-          Our Training Videos
+          Cohen & Klein Consulting Inc Training Videos Overview
         </h3>
       </div>
 

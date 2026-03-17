@@ -4,19 +4,30 @@ import icons from "../../assets/icons/icon.js";
 import { IoIosLink } from "react-icons/io";
 import { Link } from "react-router-dom";
 import CoursePdf from "../../assets/CourcesPDF/CoursePdf.js";
-
+import { FaYoutube } from "react-icons/fa";
 const Testimonial = () => {
   return (
     <div className="roboto pb-[80px] bg-[#FFFAF2] mx-auto">
       <div className="z-10">
         <div className="px-4 sm:px-6 lg:px-12">
-          <div className="font-serif lg:text-[36px] sm:text-2xl text-base text-center text-primary font-semibold mb-8">
-            Some Recent Debt Collections & Revenue Management Testimonials
+          <div className="font-serif lg:text-[30px] sm:text-2xl text-base text-center text-primary font-semibold mb-8">
+            Debt Collections & Revenue Management Videos Overview & Training Outline
           </div>
 
           <div className="flex flex-col lg:flex-row gap-10">
             {/* Left column */}
             <div className="flex flex-col sm:gap-6 gap-3 lg:items-left items-left ">
+              <a
+                href="https://www.youtube.com/watch?v=vNS3Dse8lqM"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-3 items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]"
+              >
+                <span className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em]">
+                  Watch Video
+                </span>
+                <FaYoutube className="text-red-600 h-7 w-7" />
+              </a>
               <div className=" flex gap-3 cursor-pointer items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="#"
@@ -43,6 +54,17 @@ const Testimonial = () => {
 
             {/* Right column */}
             <div className="flex flex-col sm:gap-6 gap-3 ml-auto max-w-[660px]">
+              <a
+                href="https://www.youtube.com/watch?v=Nbq82TIDBvw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-3 items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]"
+              >
+                <span className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em]">
+                  Watch Video
+                </span>
+                <FaYoutube className="text-red-600 h-7 w-7" />
+              </a>
               <div className="  flex gap-3 items-center max-w-[660px]  border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="/callinner"
