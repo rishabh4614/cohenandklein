@@ -17,17 +17,31 @@ const Testimonial = () => {
           <div className="flex flex-col lg:flex-row gap-10">
             {/* Left column */}
             <div className="flex flex-col sm:gap-6 gap-3 lg:items-left items-left ">
-              <a
-                href="https://www.youtube.com/watch?v=vNS3Dse8lqM"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex gap-3 items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]"
-              >
-                <span className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em]">
-                  Watch Video
-                </span>
-                <FaYoutube className="text-red-600 h-7 w-7" />
-              </a>
+             <div class="max-w-[410px] w-full mx-auto rounded-lg overflow-hidden shadow-[0_4px_40px_rgba(1,61,123,0.10)] bg-white p-4 cursor-pointer"
+              onClick={() => window.open("https://www.youtube.com/watch?v=vNS3Dse8lqM", "_blank")}
+                  >
+                    {/* Video Thumbnail */}
+                    <div className="relative h-[200px] rounded-xl overflow-hidden">
+                      <iframe
+                        className="w-full h-full rounded-xl"
+                        src="https://www.youtube.com/embed/vNS3Dse8lqM"
+                        title="YouTube video"
+                        frameBorder="0"
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+
+                    {/* Text Section */}
+                    <div className="pt-4 flex flex-col gap-2">
+                      <h2 className="text-[18px] font-semibold text-primary">
+                        Streamline Your Debt Collection & Revenue Department
+                      </h2>
+                      <p className="text-[#021326] text-sm">
+                        This video from Cohen & Klein Consulting, Inc. outlines their comprehensive training courses designed to help private and public sector institutions effectively handle delinquent accounts. Whether you're dealing with government tax collections, utility payments, or healthcare claims, this training equips your staff—from new collectors to management—with practical, ethical, and results-driven strategies.
+                      </p>
+                    </div>
+                  </div>
               <div className=" flex gap-3 cursor-pointer items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="#"
@@ -54,17 +68,34 @@ const Testimonial = () => {
 
             {/* Right column */}
             <div className="flex flex-col sm:gap-6 gap-3 ml-auto max-w-[660px]">
-              <a
-                href="https://www.youtube.com/watch?v=Nbq82TIDBvw"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex gap-3 items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]"
-              >
-                <span className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em]">
-                  Watch Video
-                </span>
-                <FaYoutube className="text-red-600 h-7 w-7" />
-              </a>
+              
+                  <div className="max-w-[410px] w-full h-full flex flex-col rounded-lg overflow-hidden shadow-[0_4px_40px_rgba(1,61,123,0.10)] bg-white p-4 mx-auto"
+                    onClick={() => window.open("https://www.youtube.com/watch?v=Nbq82TIDBvw", "_blank")}
+                  >
+                  {/* Video Thumbnail */}
+                  <div className="relative h-[200px] rounded-xl overflow-hidden">
+                    <iframe
+                      className="w-full h-full rounded-xl"
+                      src="https://www.youtube.com/embed/Nbq82TIDBvw"
+                      title="YouTube video"
+                      frameBorder="0"
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+
+                  {/* Text Section */}
+                  <div className="pt-4 flex flex-col gap-2">
+                    <h2 className="text-[18px] font-semibold text-primary">
+                      Is your debt collection department process is proactive or reactive?
+                    </h2>
+                    <p className="text-[#021326] text-sm">
+                      Video 102 of our series, Cohen & Klein Consulting, Inc. explores how to streamline and establish a highly effective debt collections and revenue department. Uncollected accounts don’t just sit idle—they grow more complex and harder to resolve over time.
+                    </p>
+                  </div>
+                </div>
+
+
               <div className="  flex gap-3 items-center max-w-[660px]  border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="/callinner"
@@ -186,3 +217,4 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
+	
