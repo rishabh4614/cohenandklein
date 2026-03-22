@@ -81,23 +81,24 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
       <div className="bg-primary w-full roboto">
-        <div className="px-4 sm:px-8 padding-2xl py-2 flex items-center justify-between">
+        <div className="px-4 sm:px-8 padding-2xl py-2 flex items-center">
           <div className="flex-shrink-0">
-            <Link to="/">
-              <img
-                src={images.logo2}
-                alt="Logo"
-                className="logowidth w-[200px] md:w-[225px] lg:w-[240px]"
-              />
-            </Link>
-          </div>
-          <div className="hidden md:flex items-center">
-            <ul className="flex flex-wrap justify-center items-center md:gap-3 navgap lg:gap-4 2xl:gap-8">
+          <Link to="/">
+            <img
+              src={images.logo2}
+              alt="Logo"
+              className="logowidth w-[200px] md:w-[225px] lg:w-[240px]"
+            />
+          </Link>
+    </div>
+          <div className="hidden md:flex flex-1 items-center justify-center px-4">
+            <ul className="flex flex-nowrap items-center whitespace-nowrap md:gap-2 navgap lg:gap-3 2xl:gap-8">
               {Links.map((data) => (
                 <li
                   key={data.id}
-                  className={`text-sm lg:text-base 2xl:text-lg font-medium ${
+                  className={`text-xs md:text-sm lg:text-base 2xl:text-lg font-medium ${
                     location.pathname === data.link
                       ? "text-hoverclr"
                       : "text-white"
@@ -120,12 +121,11 @@ const Navbar = () => {
             </ul>
           </div>
           <button
-            className="menu-toggle block md:hidden text-white text-2xl"
-            onClick={() => setMenuOpen(true)}
-          >
-            <MdMenu />
-          </button>
-
+      className="menu-toggle block md:hidden text-white text-2xl"
+      onClick={() => setMenuOpen(true)}
+    >
+      <MdMenu />
+    </button>
           {menuOpen && (
             <div className="fixed top-20 right-0 w-[250px] h-[450px] bg-gray-900 text-white shadow-lg z-50 px-6 pt-18 transition-transform transform translate-x-0">
               <button

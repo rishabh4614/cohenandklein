@@ -1470,7 +1470,7 @@ const Links = [
   { id: 4, name: "About Us", link: "/about" },
   { id: 5, name: "Contact Us", link: "/contact" },
   { id: 6, name: "History", link: "/history", pdf: CoursePdf.historypdf }, 
-  { id: 7, name: "Videos", link: "/video" },
+  { id: 7, name: "Debt Collection Videos", link: "/video" },
 ];
 const CategoriesData = [
   {

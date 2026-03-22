@@ -11,37 +11,75 @@ const Testimonial = () => {
       <div className="z-10">
         <div className="px-4 sm:px-6 lg:px-12">
           <div className="font-serif lg:text-[30px] sm:text-2xl text-base text-center text-primary font-semibold mb-8">
-            Debt Collections & Revenue Management Videos Overview & Training Outline
+            Debt Collections & Revenue Management Videos Overview & Training
+            Outline
           </div>
+          <div className="flex flex-col lg:flex-row justify-center gap-4 max-w-5xl mx-auto  mb-8">
 
+  {/* Video Card 1 */}
+  <div
+    className="w-full max-w-[410px] rounded-lg overflow-hidden shadow-[0_4px_40px_rgba(1,61,123,0.10)] bg-white p-4 cursor-pointer"
+    onClick={() =>
+      window.open("https://www.youtube.com/watch?v=vNS3Dse8lqM", "_blank")
+    }
+  >
+    <div className="relative h-[200px] rounded-xl overflow-hidden">
+      <iframe
+        className="w-full h-full rounded-xl"
+        src="https://www.youtube.com/embed/vNS3Dse8lqM"
+        title="YouTube video"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+      ></iframe>
+    </div>
+
+    <div className="pt-4 flex flex-col gap-2">
+      <h2 className="text-[18px] font-semibold text-primary">
+        Streamline Your Debt Collection & Revenue Department
+      </h2>
+      <p className="text-sm text-gray-600">
+        This video from Cohen & Klein Consulting, Inc. outlines their comprehensive training courses designed to help private and public sector institutions effectively handle delinquent accounts. Whether you're dealing with government tax collections, utility payments, or healthcare claims, this training equips your staff—from new collectors to management—with practical, ethical, and results-driven strategies.
+      </p>
+    </div>
+  </div>
+
+  {/* Video Card 2 */}
+  <div
+    className="w-full max-w-[410px] rounded-lg overflow-hidden shadow-[0_4px_40px_rgba(1,61,123,0.10)] bg-white p-4 cursor-pointer"
+    onClick={() =>
+      window.open("https://www.youtube.com/watch?v=Nbq82TIDBvw", "_blank")
+    }
+  >
+    <div className="relative h-[200px] rounded-xl overflow-hidden">
+      <iframe
+        className="w-full h-full rounded-xl"
+        src="https://www.youtube.com/embed/Nbq82TIDBvw"
+        title="YouTube video"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+      ></iframe>
+    </div>
+
+    <div className="pt-4 flex flex-col gap-2">
+      <h2 className="text-[18px] font-semibold text-primary">
+        Is your debt collection process proactive or reactive?
+      </h2>
+      <p className="text-sm text-gray-600">
+        Video 102 of our series, Cohen & Klein Consulting, Inc. explores how to streamline and establish a highly effective debt collections and revenue department. Uncollected accounts don’t just sit idle—they grow more complex and harder to resolve over time.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
+          
           <div className="flex flex-col lg:flex-row gap-10">
             {/* Left column */}
             <div className="flex flex-col sm:gap-6 gap-3 lg:items-left items-left ">
-             <div class="max-w-[410px] w-full mx-auto rounded-lg overflow-hidden shadow-[0_4px_40px_rgba(1,61,123,0.10)] bg-white p-4 cursor-pointer"
-              onClick={() => window.open("https://www.youtube.com/watch?v=vNS3Dse8lqM", "_blank")}
-                  >
-                    {/* Video Thumbnail */}
-                    <div className="relative h-[200px] rounded-xl overflow-hidden">
-                      <iframe
-                        className="w-full h-full rounded-xl"
-                        src="https://www.youtube.com/embed/vNS3Dse8lqM"
-                        title="YouTube video"
-                        frameBorder="0"
-                        allow="autoplay; encrypted-media"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-
-                    {/* Text Section */}
-                    <div className="pt-4 flex flex-col gap-2">
-                      <h2 className="text-[18px] font-semibold text-primary">
-                        Streamline Your Debt Collection & Revenue Department
-                      </h2>
-                      <p className="text-[#021326] text-sm">
-                        This video from Cohen & Klein Consulting, Inc. outlines their comprehensive training courses designed to help private and public sector institutions effectively handle delinquent accounts. Whether you're dealing with government tax collections, utility payments, or healthcare claims, this training equips your staff—from new collectors to management—with practical, ethical, and results-driven strategies.
-                      </p>
-                    </div>
-                  </div>
+              
               <div className=" flex gap-3 cursor-pointer items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="#"
@@ -50,7 +88,8 @@ const Testimonial = () => {
                     window.open(CoursePdf.debtcolltraining, "_blank")
                   }
                 >
-                  Debt Collection and revenue management training testimonials for banks and other financial institutions
+                  Debt Collection and revenue management training testimonials
+                  for banks and other financial institutions
                 </Link>
                 <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
               </div>
@@ -69,33 +108,6 @@ const Testimonial = () => {
             {/* Right column */}
             <div className="flex flex-col sm:gap-6 gap-3 ml-auto max-w-[660px]">
               
-                  <div className="max-w-[410px] w-full h-full flex flex-col rounded-lg overflow-hidden shadow-[0_4px_40px_rgba(1,61,123,0.10)] bg-white p-4 mx-auto"
-                    onClick={() => window.open("https://www.youtube.com/watch?v=Nbq82TIDBvw", "_blank")}
-                  >
-                  {/* Video Thumbnail */}
-                  <div className="relative h-[200px] rounded-xl overflow-hidden">
-                    <iframe
-                      className="w-full h-full rounded-xl"
-                      src="https://www.youtube.com/embed/Nbq82TIDBvw"
-                      title="YouTube video"
-                      frameBorder="0"
-                      allow="autoplay; encrypted-media"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-
-                  {/* Text Section */}
-                  <div className="pt-4 flex flex-col gap-2">
-                    <h2 className="text-[18px] font-semibold text-primary">
-                      Is your debt collection department process is proactive or reactive?
-                    </h2>
-                    <p className="text-[#021326] text-sm">
-                      Video 102 of our series, Cohen & Klein Consulting, Inc. explores how to streamline and establish a highly effective debt collections and revenue department. Uncollected accounts don’t just sit idle—they grow more complex and harder to resolve over time.
-                    </p>
-                  </div>
-                </div>
-
-
               <div className="  flex gap-3 items-center max-w-[660px]  border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="/callinner"
@@ -115,7 +127,8 @@ const Testimonial = () => {
                     window.open(CoursePdf.Testimonials131412032026, "_blank")
                   }
                 >
-                  Debt Collections and Revenue Management Regional Training Testimonials from our Valued Clients
+                  Debt Collections and Revenue Management Regional Training
+                  Testimonials from our Valued Clients
                 </Link>
                 <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
               </div>
@@ -144,26 +157,25 @@ const Testimonial = () => {
           </div>
         </div>
 
-        
-                  
         <div className="flex justify-center w-full xl:w-1/2">
           <div className="relative z-10 mt-[79px]">
             <div className="absolute inset-0 z-0 pointer-events-none">
-            <img
-              src={images.dotes}
-              alt=""
-              className="absolute top-[26px] left-[-20px]"
-            />
-            <img
-              src={images.orangecircle}
-              alt=""
-              className="hidden sm:block absolute top-[110px] left-[90px] max-w-[370px]"
-            />
-          </div>
-            <div className="relative z-10 bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]
+              <img
+                src={images.dotes}
+                alt=""
+                className="absolute top-[26px] left-[-20px]"
+              />
+              <img
+                src={images.orangecircle}
+                alt=""
+                className="hidden sm:block absolute top-[110px] left-[90px] max-w-[370px]"
+              />
+            </div>
+            <div
+              className="relative z-10 bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]
                     max-w-[345px] h-[252px] p-[20px]
-                    flex flex-col rounded-[10px]">
-                      
+                    flex flex-col rounded-[10px]"
+            >
               <div className="pb-[20px] border-b-[2px] border-[rgba(0,0,0,0.1)]">
                 <h3 className="text-primary text-[20px] font-semibold roboto-serif-font pb-[10px]">
                   Cohen & Klein Consulting
@@ -217,4 +229,3 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
-	
