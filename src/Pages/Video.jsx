@@ -22,8 +22,8 @@ const videoData = [
   {
     id: 4,
     videoUrl: "https://www.youtube.com/embed/q-nOTrHW9V0",
-    title: "Strategies for Success: Debt Collections & Utilities Management | Cohen & Klein Consulting, Inc.",
-    desc: "Managing revenue in the utilities sector—whether it’s water, electricity, or telecommunications—requires a unique blend of firm recovery strategies and exceptional customer relations. In this video, Cohen & Klein Consulting, Inc., takes you inside a specialized training session focused on the high-stakes world of Utilities Revenue Recovery.",
+    title: "Professional Debt Collections Training: Strategies for Success | Cohen & Klein Consulting, Inc.",
+    desc: "Managing revenue and cash flow in any business requires a unique blend of firm recovery strategies and exceptional customer relations. In this video, Cohen & Klein Consulting, Inc., takes you inside a specialized training session focused on the high-stakes world of Revenue Recovery and Debt Collections. Discover how organizations are moving beyond traditional collection approaches to adopt a proactive, data-driven methodology that secures cash flow while maintaining strong customer relationships.",
   },
   {
   id: 5,
