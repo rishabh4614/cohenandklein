@@ -211,7 +211,7 @@ const Testimonial = () => {
       </div>
 
       <div className="flex xl:flex-row flex-col mt-6 gap-10 md:px-15 justify-between items-start">
-        <div className="flex justify-start">
+        <div className="flex flex-col justify-start">
           <div
             className="flex flex-col relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b] 2xl:p-3 lg:p-2 sm:p-4 p-2.5 gap-1 2xl:max-w-[510px] max-w-[460px] sm:mt-[99px] mt-10 lg:ml-[60px] items-center cursor-pointer"
             onClick={() => window.open(CoursePdf.debtcollectionpdf, "_blank")}
@@ -222,13 +222,20 @@ const Testimonial = () => {
                 100+ Debt Collection & Revenue Management Training Courses
               </h6>
             </div>
-
-            <p className="text-smallclr roboto 2xl:text-lg text-sm sm:text-base leading-[23px]">
-              The longer your delinquent accounts go uncollected, the harder
-              they will be to recover.
-            </p>
           </div>
+          <div className="flex flex-col gap-4 2xl:max-w-[510px] max-w-[460px] lg:ml-[60px] mt-4 px-1">
+            <div className="flex items-start gap-3">
+              {/* <span className="mt-1 w-5 h-[2px] bg-gray-500 shrink-0 inline-block"></span> */}
+              <p className="text-primary roboto-serif-font font-semibold">
+                The longer your delinquent accounts go uncollected, the more difficult they will be to collect or recover
+              </p>
+            </div>
+            <p className="text-primary roboto-serif-font font-semibold">
+              This will be the case for private and public sector institutions.
+            </p>
+          </div>        
         </div>
+        
 
         <div className="flex justify-center w-full xl:w-1/2">
           <div className="relative z-10 mt-[79px]">
@@ -296,7 +303,10 @@ const Testimonial = () => {
             </div>
           </div>
         </div>
+
+        
       </div>
+      
     </div>
   );
 };
