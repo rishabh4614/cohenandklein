@@ -223,17 +223,20 @@ const Testimonial = () => {
               </h6>
             </div>
           </div>
-          <div className="flex flex-col gap-4 2xl:max-w-[510px] max-w-[460px] lg:ml-[60px] mt-4 px-1">
-            <div className="flex items-start gap-3">
-              {/* <span className="mt-1 w-5 h-[2px] bg-gray-500 shrink-0 inline-block"></span> */}
-              <p className="text-primary roboto-serif-font font-semibold">
-                The longer your delinquent accounts go uncollected, the more difficult they will be to collect or recover
-              </p>
-            </div>
-            <p className="text-primary roboto-serif-font font-semibold">
-              This will be the case for private and public sector institutions.
-            </p>
-          </div>        
+         <div className="flex flex-col gap-4 2xl:max-w-[510px] max-w-[460px] lg:ml-[60px] mt-4 px-1">
+          <p className="text-secondary 2xl:text-2xl lg:text-xl sm:text-base text-xs font-medium roboto-serif-font 
+            max-w-[800px] whitespace-nowrap text-center mx-auto lg:leading-10 sm:leading-8 leading-6">
+            "The longer your delinquent accounts go uncollected,
+          </p>
+          <p className="-mt-3 text-secondary 2xl:text-2xl lg:text-xl sm:text-base text-xs font-medium roboto-serif-font 
+            max-w-[800px] whitespace-nowrap text-center mx-auto lg:leading-10 sm:leading-8 leading-6">
+            the more difficult they will be to collect or recover"
+          </p>
+          <p className="text-secondary 2xl:text-2xl lg:text-xl sm:text-base text-xs font-medium roboto-serif-font 
+            max-w-[800px] whitespace-nowrap text-center mx-auto lg:leading-10 sm:leading-8 leading-6">
+            This will be the case for private and public sector institutions.
+          </p>
+        </div>     
         </div>
         
 
