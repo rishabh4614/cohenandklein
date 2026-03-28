@@ -226,13 +226,14 @@ const Testimonial = () => {
          <div className="flex flex-col gap-4 2xl:max-w-[510px] max-w-[460px] lg:ml-[60px] mt-4 px-1">
         <p className="text-secondary 2xl:text-2xl lg:text-xl sm:text-base text-xs font-medium roboto-serif-font 
         text-center mx-auto leading-tight whitespace-nowrap">
-          <span style={{ background: 'linear-gradient(135deg, #9b8fd4, #7c6bbf)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+          <span style={{ background: 'linear-gradient(135deg, #f9608a, #f0457a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',fontSize: '28px' }}>
         "The longer your delinquent accounts go uncollected, <br />the more difficult they will be to collect or recover"
       </span>
+      
         </p>
-          <p style={{ background: 'linear-gradient(135deg, #4ecdc4, #45b89a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} className="text-secondary 2xl:text-2xl lg:text-xl sm:text-base text-xs font-medium roboto-serif-font text-center mx-auto leading-tight whitespace-nowrap">
-  This will be the case for private and public sector institutions.
-</p>
+          <p style={{ background: 'linear-gradient(135deg, #4ecdc4, #45b89a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} className="text-secondary 2xl:text-2xl lg:text-xl sm:text-base text-xs font-medium roboto-serif-font text-center mx-auto leading-tight whitespace-nowrap ">
+          This will be the case for private and public sector institutions.
+        </p>
         </div>     
         </div>
         
