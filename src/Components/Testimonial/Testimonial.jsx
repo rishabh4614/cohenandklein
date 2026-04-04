@@ -226,16 +226,16 @@ const Testimonial = () => {
          <div className="flex flex-col gap-4 2xl:max-w-[510px] max-w-[460px] lg:ml-[60px] mt-4 px-1">
   <div className="flex flex-col gap-0">
   <p style={{ background: 'linear-gradient(135deg, #f9608a, #f0457a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} 
-    className="2xl:text-2xl lg:text-xl sm:text-base text-sm font-medium roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap">
+    className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap">
     "The longer your delinquent accounts go uncollected,
   </p>
   <p style={{ background: 'linear-gradient(135deg, #f9608a, #f0457a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} 
-    className="2xl:text-2xl lg:text-xl sm:text-base text-sm font-medium roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap">
+    className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap">
     the more difficult they will be to collect or recover"
   </p>
 </div>
   <p style={{ background: 'linear-gradient(135deg, #4ecdc4, #45b89a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} 
-  className="2xl:text-2xl lg:text-xl sm:text-base text-sm font-medium roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap">
+  className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap">
   This will be the case for private and public sector institutions.
 </p>
 </div>    
