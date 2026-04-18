@@ -117,7 +117,7 @@ const OnlineCources = () => {
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
                   }}
-                  className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap"
+                  className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug"
                 >
                   "The longer your delinquent accounts go uncollected,
                 </p>
@@ -128,22 +128,22 @@ const OnlineCources = () => {
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
                   }}
-                  className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap"
+                  className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug"
                 >
                   the more difficult they will be to collect or recover"
                 </p>
               </div>
               <p
-                style={{
-                  background: "linear-gradient(135deg, #4ecdc4, #45b89a)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-                className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap"
-              >
-                This will be the case for private and public sector institutions.
-              </p>
+              style={{
+                background: "linear-gradient(135deg, #4ecdc4, #45b89a)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+              className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug"
+            >
+              This will be the case for private and public sector institutions.
+            </p>
             </div>
           </div>
 
