@@ -28,8 +28,8 @@ const Explore = () => {
     <div className=" pt-9 padding-2xl lg:px-15 px-5 roboto">
       <div className="mx-auto flex justify-center">
         <div>
-          <h3 className="font-serif sm:text-[36px] text-xl text-center text-primary font-semibold">
-           Some Recent Testimonials
+          <h3 className="font-serif sm:text-[34px] text-xl text-center text-primary font-semibold">
+           Some Additional Testimonials With Proven Results.
           </h3>
           {/* <p className="roboto-serif-font font-bold sm:text-[21px] text-xs text-secondary pt-[10px] flex justify-center">
             Gain insights into our vision and explore engaging videos.

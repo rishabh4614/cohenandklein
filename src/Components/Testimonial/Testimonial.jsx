@@ -157,7 +157,7 @@ const Testimonial = () => {
               <div className=" flex gap-3 cursor-pointer items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="#"
-                  className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em] "
+                  className="text-[#021326] sm:text-[20px] text-xs tracking-[0.02em] "
                   onClick={() =>
                     window.open(CoursePdf.debtcolltraining, "_blank")
                   }
@@ -170,7 +170,7 @@ const Testimonial = () => {
               <div className=" flex gap-3 items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="/debtcollinner"
-                  className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em] "
+                  className="text-[#021326] sm:text-[20px] text-xs tracking-[0.02em] "
                 >
                   Inspiring Debt Collection and Revenue Management Training
                   Testimonials from Our Satisfied Clients
@@ -184,7 +184,7 @@ const Testimonial = () => {
               <div className="  flex gap-3 items-center max-w-[660px]  border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="/callinner"
-                  className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em]"
+                  className="text-[#021326] sm:text-[20px] text-xs tracking-[0.02em]"
                 >
                   Authentic Call Center and Customer Service Training
                   Testimonials from Our Valued Clients
@@ -195,7 +195,7 @@ const Testimonial = () => {
               <div className="  flex gap-3 items-center max-w-[660px]  border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="#"
-                  className="text-[#021326] sm:text-[16px] text-xs tracking-[0.02em] "
+                  className="text-[#021326] sm:text-[20px] text-xs tracking-[0.02em] "
                   onClick={() =>
                     window.open(CoursePdf.Testimonials131412032026, "_blank")
                   }
@@ -210,107 +210,7 @@ const Testimonial = () => {
         </div>
       </div>
 
-      <div className="flex xl:flex-row flex-col mt-6 gap-10 md:px-15 justify-between items-start">
-        <div className="flex flex-col justify-start">
-          <div
-            className="flex flex-col relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b] 2xl:p-3 lg:p-2 sm:p-4 p-2.5 gap-1 2xl:max-w-[510px] max-w-[460px] sm:mt-[99px] mt-10 lg:ml-[60px] items-center cursor-pointer"
-            onClick={() => window.open(CoursePdf.debtcollectionpdf, "_blank")}
-          >
-            <div className="flex gap-x-2">
-              <img src={images.pdf} alt="" className="max-w-15 h-13 m-auto" />
-              <h6 className="text-primary leading-[23px] font-medium roboto-serif-font 2xl:text-[22px] sm:text-lg text-base">
-                100+ Debt Collection & Revenue Management Training Courses
-              </h6>
-            </div>
-          </div>
-         <div className="flex flex-col gap-4 2xl:max-w-[510px] max-w-[460px] lg:ml-[60px] mt-4 px-1">
-  <div className="flex flex-col gap-0">
-  <p style={{ background: 'linear-gradient(135deg, #f9608a, #f0457a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} 
-    className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap">
-    "The longer your delinquent accounts go uncollected,
-  </p>
-  <p style={{ background: 'linear-gradient(135deg, #f9608a, #f0457a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} 
-    className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap">
-    the more difficult they will be to collect or recover"
-  </p>
-</div>
-  <p style={{ background: 'linear-gradient(135deg, #4ecdc4, #45b89a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} 
-  className="2xl:text-2xl lg:text-2xl sm:text-base text-sm font-semibold roboto-serif-font text-center mx-auto leading-snug whitespace-nowrap">
-  This will be the case for private and public sector institutions.
-</p>
-</div>    
-        </div>
-        
-
-        <div className="flex justify-center w-full xl:w-1/2">
-          <div className="relative z-10 mt-[79px]">
-            <div className="absolute inset-0 z-0 pointer-events-none">
-              <img
-                src={images.dotes}
-                alt=""
-                className="absolute top-[26px] left-[-20px]"
-              />
-              <img
-                src={images.orangecircle}
-                alt=""
-                className="hidden sm:block absolute top-[110px] left-[90px] max-w-[370px]"
-              />
-            </div>
-            <div
-              className="relative z-10 bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]
-                    max-w-[345px] h-[252px] p-[20px]
-                    flex flex-col rounded-[10px]"
-            >
-              <div className="pb-[20px] border-b-[2px] border-[rgba(0,0,0,0.1)]">
-                <h3 className="text-primary text-[20px] font-semibold roboto-serif-font pb-[10px]">
-                  Cohen & Klein Consulting
-                </h3>
-
-                <div className="flex items-center gap-[15px]">
-                  <img
-                    src={icons.many}
-                    alt=""
-                    className="px-[12px] py-[14px] bg-primary rounded-[10px]"
-                  />
-                  <img
-                    src={icons.sixytythree}
-                    alt=""
-                    className="px-[12px] py-[14px] bg-primary rounded-[10px]"
-                  />
-                  <img
-                    src={icons.img34}
-                    alt=""
-                    className="px-[12px] py-[14px] bg-primary rounded-[10px]"
-                  />
-                  <img
-                    src={icons.thousand}
-                    alt=""
-                    className="px-[12px] py-[14px] bg-primary rounded-[10px]"
-                  />
-                </div>
-              </div>
-
-              <div className="mt-[20px]">
-                <p className="text-[#021326]">You can Register through</p>
-                <div className="flex gap-[15px] mt-[15px]">
-                  <Link to="/registration?method=email">
-                    <button className="px-[50px] py-[10px] bg-secondary rounded-[5px] text-white cursor-pointer">
-                      Email
-                    </button>
-                  </Link>
-                  <Link to="/registration?method=fax">
-                    <button className="px-[50px] py-[10px] bg-primary rounded-[5px] text-white cursor-pointer">
-                      By Fax
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-      </div>
+     
       
     </div>
   );

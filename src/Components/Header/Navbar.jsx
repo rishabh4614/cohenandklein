@@ -121,7 +121,7 @@ const Navbar = () => {
             </ul>
           </div>
           <button
-      className="menu-toggle block md:hidden text-white text-2xl"
+    className="menu-toggle ml-auto block md:hidden text-white text-2xl"
       onClick={() => setMenuOpen(true)}
     >
       <MdMenu />

@@ -45,8 +45,7 @@ const Training = () => {
       <div className="roboto 2xl:px-37.5 lg:px-15 px-4">
         <div className="flex flex-col sm:pt-[40px] justify-between sm:gap-0 gap-2">
           <h2 className="text-primary mx-auto md:text-[32px] sm:text-2xl text-xl font-semibold  roboto-serif-font pr-[20px]">
-            February to June & December 2026 Training Schedule: Face-to-Face,
-            Fort Lauderdale, Florida
+            Some Frequently Requested Training Courses.
           </h2>
           <p className="roboto-serif-font font-bold sm:text-[21px] text-xs text-secondary pt-[10px] flex justify-center">
             In-house and virtual training can be arranged for the following courses
@@ -55,6 +54,7 @@ const Training = () => {
       </div>
 
       <div className="roboto sm:pt-[70px] sm:pb-[40px] py-10 padding-2xl lg:px-15 px-4 relative">
+          {/* <div style={{ minHeight: '1300px' }}> */}
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-10 gap-y-11 overflow-hidden">
           {MeetingData.slice(currentIndex, currentIndex + cardsPerPage).map(
             (data, index) => (
@@ -78,12 +78,12 @@ const Training = () => {
                   <div className="p-[15px]">
                     <div className="flex justify-between items-center">
                       <div className="flex gap-1">
-                        <span className="text-smallclr text-[13px] font-medium">
+                        {/* <span className="text-smallclr text-[13px] font-medium">
                           {data.subtitle}
-                        </span>
-                        <span className="text-smallclr text-[13px] font-medium">
+                        </span> */}
+                        {/* <span className="text-smallclr text-[13px] font-medium">
                           {data.Date}
-                        </span>
+                        </span> */}
                       </div>
                       {/* <div className="flex gap-2 items-center">
                         <span className="text-smallclr text-[13px]">
@@ -123,10 +123,12 @@ const Training = () => {
               </div>
             )
           )}
-        </div>
 
+          
+        </div>
+      </div>  
         {/* Slider Navigation Buttons */}
-      </div>
+      {/* </div> */}
       <div className="w-full flex flex-col sm:flex-row items-center justify-between sm:relative sm:py-4 sm:px-4 gap-4 sm:gap-0">
         {/* Slider Buttons - Top on mobile, Right on desktop */}
         <div className="order-2 sm:mx-auto flex gap-3 sm:gap-4 items-center ">
