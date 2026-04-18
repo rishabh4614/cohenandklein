@@ -65,9 +65,9 @@ const Training = () => {
                 <div>
                   <div className="relative">
                     <div className="absolute max-w-[85px] h-[75px] bg-primary left-[30px]">
-                      <p className="text-2xl font-bold items-center p-[8px] text-center leading-[30px] text-white">
+                      {/* <p className="text-2xl font-bold items-center p-[8px] text-center leading-[30px] text-white">
                         {data.day}
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                   <img
