@@ -154,7 +154,7 @@ const Testimonial = () => {
           <div className="flex flex-col lg:flex-row gap-10">
             {/* Left column */}
             <div className="flex flex-col sm:gap-6 gap-3 lg:items-left items-left ">
-              <div className=" flex gap-3 cursor-pointer items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
+              <div className=" flex gap-3 cursor-pointer bg-white border-[2px] rounded-[10px] border-[#f8c67b] items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="#"
                   className="text-[#021326] sm:text-[20px] text-xs tracking-[0.02em] "
@@ -167,7 +167,7 @@ const Testimonial = () => {
                 </Link>
                 <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
               </div>
-              <div className=" flex gap-3 items-center max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
+              <div className=" flex gap-3 items-center bg-white border-[2px] rounded-[10px] border-[#f8c67b] max-w-[660px] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="/debtcollinner"
                   className="text-[#021326] sm:text-[20px] text-xs tracking-[0.02em] "
@@ -181,7 +181,7 @@ const Testimonial = () => {
 
             {/* Right column */}
             <div className="flex flex-col sm:gap-6 gap-3 ml-auto max-w-[660px]">
-              <div className="  flex gap-3 items-center max-w-[660px]  border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
+              <div className="  flex gap-3 items-center max-w-[660px] bg-white border-[2px] rounded-[10px] border-[#f8c67b] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="/callinner"
                   className="text-[#021326] sm:text-[20px] text-xs tracking-[0.02em]"
@@ -192,7 +192,7 @@ const Testimonial = () => {
                 <IoIosLink className="text-[#039EFF] h-7 w-7 cursor-pointer" />
               </div>
 
-              <div className="  flex gap-3 items-center max-w-[660px]  border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
+              <div className="  flex gap-3 items-center max-w-[660px] bg-white border-[2px] rounded-[10px] border-[#f8c67b] border-[1px] border-[#C2C2C2] px-5 py-4 rounded-xl bg-white shadow-[0_4px_40px_rgba(1,61,123,0.10)]">
                 <Link
                   to="#"
                   className="text-[#021326] sm:text-[20px] text-xs tracking-[0.02em] "

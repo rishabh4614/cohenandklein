@@ -69,6 +69,9 @@ const TestimonialSlider = () => {
           <p className="roboto-serif-font font-bold sm:text-[21px] text-xs text-secondary pt-[10px] flex justify-center">
             in different locations
           </p>
+          <h3 className="roboto-serif-font md:text-[22px] sm:text-2xl text-xl text-center text-primary font-semibold">
+            Some Additional Testimonials With Proven Results.
+          </h3>
         </div>
       </div>
 

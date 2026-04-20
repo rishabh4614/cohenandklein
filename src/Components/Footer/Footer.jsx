@@ -124,7 +124,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-2 md:gap-5 text-center md:text-left sm:order-2 order-1">
           <a href="#" className="flex items-center gap-2">
-            <icons.MdOutlineEmail /> training@cohenandklein.com
+            <icons.MdOutlineEmail /> <span style={{ fontWeight: 'bold' }}>training@cohenandklein.com</span>
           </a>
           {/* <a href="#" className="flex items-center gap-2">
             <icons.MdOutlineEmail /> collect@gate.net

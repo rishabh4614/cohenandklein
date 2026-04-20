@@ -25,7 +25,7 @@ const Navbar = () => {
                 <icons.MdOutlineEmail /> cohenandklein@cohenandklein.com
               </Link> */}
               <Link to="#" className="flex items-center gap-2">
-                <icons.MdOutlineEmail /> training@cohenandklein.com
+                <icons.MdOutlineEmail /> <span style={{ fontWeight: 'bold' }}>training@cohenandklein.com</span>
               </Link>
               {/* <Link to="#" className="flex items-center gap-2">
                 <icons.MdOutlineEmail /> collect@gate.net
