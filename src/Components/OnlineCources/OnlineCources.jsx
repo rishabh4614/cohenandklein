@@ -94,7 +94,7 @@ const OnlineCources = () => {
           ))}
         </div>
           <div className="font-serif lg:text-[25px] sm:text-2xl text-base text-center text-[#e86a8c] font-semibold mb-1">
-          "The Most Comprehensive Debt Collections and Revenue Management Training Courses."
+          "The Most Comprehensive Debt Collections And Revenue Management Training Courses."
           </div>
         {/* New section added at the end */}
         <div className="flex xl:flex-row flex-col gap-10 md:px-15 justify-between items-start">
