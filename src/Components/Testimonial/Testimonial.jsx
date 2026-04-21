@@ -149,8 +149,11 @@ const Testimonial = () => {
               </div>
               
             </div>
+            
           </div>
-
+          <div className="font-serif lg:text-[25px] sm:text-2xl text-base text-center text-[#e86a8c] font-semibold mb-8">
+  Do you have a Sharp Increase in Delinquent Accounts?
+</div>
           <div className="flex flex-col lg:flex-row gap-10">
             {/* Left column */}
             <div className="flex flex-col sm:gap-6 gap-3 lg:items-left items-left ">

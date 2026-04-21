@@ -93,9 +93,11 @@ const OnlineCources = () => {
             </div>
           ))}
         </div>
-
+          <div className="font-serif lg:text-[25px] sm:text-2xl text-base text-center text-[#e86a8c] font-semibold mb-1">
+          "The Most Comprehensive Debt Collections and Revenue Management Training Courses."
+          </div>
         {/* New section added at the end */}
-        <div className="flex xl:flex-row flex-col mt-6 gap-10 md:px-15 justify-between items-start">
+        <div className="flex xl:flex-row flex-col gap-10 md:px-15 justify-between items-start">
           <div className="flex flex-col justify-start">
             <div
               className="flex flex-col relative z-10 bg-white border-[2px] rounded-[10px] border-[#f8c67b] 2xl:p-3 lg:p-2 sm:p-4 p-2.5 gap-1 2xl:max-w-[510px] max-w-[460px] sm:mt-[99px] mt-10 lg:ml-[60px] items-center cursor-pointer"
